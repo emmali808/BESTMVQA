@@ -4,7 +4,7 @@
 
 [Paper]
 
-This is the repository for the ASMVQA, a unified assistant system for users to conveniently perform diverse medical practice. The demonstration video of our system can be found at https://youtu.be/QkEeFlu1x4A. The repository contains:
+This is the repository for the BESTMVQA, a unified assistant system for users to conveniently perform diverse medical practice. The demonstration video of our system can be found at https://youtu.be/QkEeFlu1x4A. The repository contains:
 
 - Overview
 - Med-VQA Data for Pre-training and Fine-tuning
