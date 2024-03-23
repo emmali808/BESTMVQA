@@ -1,0 +1,2656 @@
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=0, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t0/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.18611111 0.28611111 0.34166667 0.35555556 0.36666667 0.36666667] 	time: 0.9281957149505615
+step: 50 	training acc: [0.175      0.36666667 0.40555556 0.43333333 0.45555556 0.46666667] 	time: 21.47355341911316
+step: 100 	training acc: [0.18333333 0.40555556 0.47222222 0.47777778 0.49166667 0.49722222] 	time: 21.101147174835205
+step: 150 	training acc: [0.175      0.48055556 0.55       0.55833333 0.57222222 0.58888889] 	time: 21.10907745361328
+step: 200 	training acc: [0.2        0.41111111 0.45       0.51388889 0.53611111 0.54444444] 	time: 21.27143406867981
+step: 250 	training acc: [0.14722222 0.44444444 0.47222222 0.49444444 0.51666667 0.51666667] 	time: 21.399828910827637
+step: 300 	training acc: [0.16388889 0.54722222 0.63611111 0.66388889 0.67222222 0.66666667] 	time: 21.12382173538208
+step: 350 	training acc: [0.18055556 0.38888889 0.46111111 0.52777778 0.53055556 0.54722222] 	time: 21.906977653503418
+step: 400 	training acc: [0.21111111 0.56666667 0.63611111 0.64722222 0.64444444 0.65277778] 	time: 21.210524559020996
+step: 450 	training acc: [0.15       0.48333333 0.54444444 0.56388889 0.56944444 0.57222222] 	time: 21.220548629760742
+step: 500 	training acc: [0.22222222 0.575      0.60833333 0.62777778 0.63888889 0.64444444] 	time: 21.071513414382935
+step: 550 	training acc: [0.15277778 0.45833333 0.52222222 0.53888889 0.55       0.56388889] 	time: 21.27488374710083
+step: 600 	training acc: [0.1        0.53333333 0.60555556 0.64444444 0.64444444 0.64722222] 	time: 20.906298398971558
+step: 650 	training acc: [0.22777778 0.46111111 0.52777778 0.54722222 0.54444444 0.55833333] 	time: 20.905812740325928
+step: 700 	training acc: [0.09166667 0.53055556 0.61111111 0.63611111 0.64722222 0.65555556] 	time: 21.115585327148438
+step: 750 	training acc: [0.15       0.53333333 0.57777778 0.60555556 0.625      0.62777778] 	time: 21.116610765457153
+step: 800 	training acc: [0.24444444 0.66666667 0.70833333 0.73055556 0.725      0.725     ] 	time: 21.222421169281006
+step: 850 	training acc: [0.2        0.59166667 0.63333333 0.65277778 0.67777778 0.69166667] 	time: 20.965354442596436
+step: 900 	training acc: [0.08611111 0.64166667 0.70555556 0.725      0.71944444 0.725     ] 	time: 21.182178020477295
+step: 950 	training acc: [0.22222222 0.59722222 0.63888889 0.65833333 0.65555556 0.66111111] 	time: 20.611609935760498
+step: 1000 	training acc: [0.13055556 0.64722222 0.7        0.73611111 0.74444444 0.73611111] 	time: 21.208898544311523
+***************** Test acc: [0.1764 0.544  0.5923 0.608  0.6147 0.62   0.6235 0.625  0.627  0.6284
+ 0.6294] 	time: 104.00907921791077
+step: 1050 	training acc: [0.175      0.63611111 0.65555556 0.66388889 0.67777778 0.67777778] 	time: 20.51159405708313
+step: 1100 	training acc: [0.25833333 0.62777778 0.70277778 0.71111111 0.73055556 0.73333333] 	time: 20.72286891937256
+step: 1150 	training acc: [0.19166667 0.65833333 0.74166667 0.75277778 0.76944444 0.77222222] 	time: 20.46432399749756
+step: 1200 	training acc: [0.125      0.78611111 0.81111111 0.82777778 0.83333333 0.83611111] 	time: 22.017382621765137
+step: 1250 	training acc: [0.10277778 0.66388889 0.75       0.76111111 0.76111111 0.76111111] 	time: 20.930940628051758
+step: 1300 	training acc: [0.17777778 0.73611111 0.76111111 0.775      0.78055556 0.8       ] 	time: 21.77427625656128
+step: 1350 	training acc: [0.13611111 0.81666667 0.825      0.82222222 0.825      0.83055556] 	time: 14.914251327514648
+step: 1400 	training acc: [0.10833333 0.79722222 0.85555556 0.86944444 0.86111111 0.86944444] 	time: 12.237869262695312
+step: 1450 	training acc: [0.19166667 0.78888889 0.83333333 0.85555556 0.86388889 0.875     ] 	time: 12.30769968032837
+step: 1500 	training acc: [0.12777778 0.78611111 0.81944444 0.83055556 0.83888889 0.83888889] 	time: 12.032167434692383
+step: 1550 	training acc: [0.11388889 0.83888889 0.88888889 0.90833333 0.90833333 0.90833333] 	time: 12.123107433319092
+step: 1600 	training acc: [0.16666667 0.76666667 0.81666667 0.83611111 0.83333333 0.83611111] 	time: 17.41866445541382
+step: 1650 	training acc: [0.19444444 0.77777778 0.85555556 0.85833333 0.86388889 0.86944444] 	time: 21.03683614730835
+step: 1700 	training acc: [0.10833333 0.78333333 0.82222222 0.85555556 0.85555556 0.85277778] 	time: 20.643869876861572
+step: 1750 	training acc: [0.19722222 0.86111111 0.88333333 0.88611111 0.88611111 0.88611111] 	time: 20.235243320465088
+step: 1800 	training acc: [0.21388889 0.85       0.88611111 0.89444444 0.89722222 0.89444444] 	time: 20.828726053237915
+step: 1850 	training acc: [0.175      0.86944444 0.88888889 0.89444444 0.9        0.9       ] 	time: 20.802525997161865
+step: 1900 	training acc: [0.12222222 0.85833333 0.86944444 0.875      0.87777778 0.87777778] 	time: 20.950764179229736
+step: 1950 	training acc: [0.18055556 0.89722222 0.92777778 0.93055556 0.93333333 0.93611111] 	time: 21.001506328582764
+step: 2000 	training acc: [0.21111111 0.80833333 0.88055556 0.89444444 0.89722222 0.90555556] 	time: 21.356427907943726
+***************** Test acc: [0.1643 0.5356 0.594  0.61   0.6147 0.6167 0.618  0.6187 0.6196 0.6196
+ 0.62  ] 	time: 103.51102018356323
+step: 2050 	training acc: [0.17222222 0.85277778 0.91944444 0.925      0.93055556 0.93333333] 	time: 21.014885902404785
+step: 2100 	training acc: [0.15833333 0.76388889 0.84444444 0.88333333 0.88055556 0.88055556] 	time: 21.622082710266113
+step: 2150 	training acc: [0.13888889 0.84166667 0.925      0.92777778 0.92777778 0.93055556] 	time: 22.20842170715332
+step: 2200 	training acc: [0.24444444 0.84722222 0.88333333 0.89166667 0.90277778 0.89444444] 	time: 20.951307773590088
+step: 2250 	training acc: [0.14444444 0.84444444 0.925      0.92777778 0.93055556 0.93333333] 	time: 21.022929906845093
+step: 2300 	training acc: [0.20833333 0.775      0.89444444 0.91388889 0.91944444 0.91944444] 	time: 21.636030435562134
+step: 2350 	training acc: [0.16944444 0.80277778 0.90277778 0.91111111 0.91388889 0.91944444] 	time: 21.372483015060425
+step: 2400 	training acc: [0.15277778 0.79166667 0.91388889 0.93055556 0.93888889 0.93888889] 	time: 20.731467247009277
+step: 2450 	training acc: [0.13333333 0.81388889 0.91111111 0.92777778 0.93333333 0.93888889] 	time: 20.728275775909424
+***************** Test acc: [0.1676 0.4941 0.5747 0.5986 0.6025 0.6035 0.6045 0.605  0.6064 0.607
+ 0.6074] 	time: 137.59631180763245
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t0
+Namespace(data='data/pathvqa_maml/', epoch=0, imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, t_dst=1, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t0/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+Traceback (most recent call last):
+  File "pathVQA_maml_half.py", line 224, in <module>
+    main(args)
+  File "pathVQA_maml_half.py", line 148, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/pathvqa_maml/t1'
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=1, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t1/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.125      0.20277778 0.24166667 0.25277778 0.26111111 0.26111111] 	time: 1.0666515827178955
+step: 50 	training acc: [0.14444444 0.33333333 0.36666667 0.40277778 0.41666667 0.42222222] 	time: 21.4182448387146
+step: 100 	training acc: [0.16388889 0.33888889 0.38888889 0.4        0.39444444 0.40555556] 	time: 21.11784863471985
+step: 150 	training acc: [0.20833333 0.44444444 0.48611111 0.50277778 0.51944444 0.51944444] 	time: 21.094103813171387
+step: 200 	training acc: [0.175      0.37222222 0.43611111 0.46111111 0.46111111 0.46666667] 	time: 20.797609090805054
+step: 250 	training acc: [0.20277778 0.39722222 0.475      0.5        0.50833333 0.50277778] 	time: 21.04810357093811
+step: 300 	training acc: [0.19722222 0.43055556 0.45833333 0.50277778 0.52222222 0.53888889] 	time: 21.31936287879944
+step: 350 	training acc: [0.19166667 0.43611111 0.49722222 0.51944444 0.525      0.525     ] 	time: 21.072192192077637
+step: 400 	training acc: [0.21666667 0.475      0.525      0.55277778 0.56111111 0.56111111] 	time: 20.450724601745605
+step: 450 	training acc: [0.19444444 0.49166667 0.54166667 0.55833333 0.56944444 0.57777778] 	time: 20.989994049072266
+step: 500 	training acc: [0.225      0.51666667 0.58055556 0.58888889 0.60833333 0.61388889] 	time: 20.39908504486084
+step: 550 	training acc: [0.19166667 0.53888889 0.59722222 0.61388889 0.625      0.63611111] 	time: 20.57991099357605
+step: 600 	training acc: [0.19166667 0.51944444 0.54722222 0.55833333 0.56666667 0.56388889] 	time: 21.239131212234497
+step: 650 	training acc: [0.15277778 0.525      0.61944444 0.65555556 0.67222222 0.66944444] 	time: 21.456687450408936
+step: 700 	training acc: [0.17222222 0.55833333 0.62777778 0.64722222 0.64722222 0.66111111] 	time: 21.284737586975098
+step: 750 	training acc: [0.16111111 0.55833333 0.60833333 0.61666667 0.625      0.62777778] 	time: 16.844162225723267
+step: 800 	training acc: [0.19166667 0.58333333 0.61666667 0.63333333 0.63611111 0.65277778] 	time: 12.636831283569336
+step: 850 	training acc: [0.20555556 0.475      0.51944444 0.55277778 0.56111111 0.56666667] 	time: 12.313424110412598
+step: 900 	training acc: [0.13888889 0.61666667 0.66944444 0.68333333 0.69444444 0.69444444] 	time: 12.416513919830322
+step: 950 	training acc: [0.24722222 0.67777778 0.74166667 0.75833333 0.76388889 0.76666667] 	time: 12.138242244720459
+step: 1000 	training acc: [0.17777778 0.62222222 0.67222222 0.68055556 0.67777778 0.68055556] 	time: 16.341811180114746
+***************** Test acc: [0.1619 0.5464 0.605  0.6226 0.6333 0.6387 0.6416 0.6445 0.646  0.6484
+ 0.649 ] 	time: 104.1321210861206
+step: 1050 	training acc: [0.18055556 0.66666667 0.68055556 0.71111111 0.70277778 0.70555556] 	time: 21.08267331123352
+step: 1100 	training acc: [0.19166667 0.63611111 0.71666667 0.71944444 0.72777778 0.74166667] 	time: 21.46487331390381
+step: 1150 	training acc: [0.18888889 0.61944444 0.66388889 0.68055556 0.68611111 0.675     ] 	time: 21.408458471298218
+step: 1200 	training acc: [0.16388889 0.75277778 0.78055556 0.79444444 0.8        0.8       ] 	time: 21.18410062789917
+step: 1250 	training acc: [0.21388889 0.63333333 0.71111111 0.7        0.71944444 0.73055556] 	time: 21.02660036087036
+step: 1300 	training acc: [0.15555556 0.68611111 0.74166667 0.76111111 0.76111111 0.76666667] 	time: 20.510064363479614
+step: 1350 	training acc: [0.19166667 0.71111111 0.76111111 0.775      0.78333333 0.78888889] 	time: 21.19459104537964
+step: 1400 	training acc: [0.12777778 0.77777778 0.81388889 0.82777778 0.82777778 0.83888889] 	time: 20.904608011245728
+step: 1450 	training acc: [0.14722222 0.81388889 0.84722222 0.86111111 0.86111111 0.86388889] 	time: 20.851621627807617
+step: 1500 	training acc: [0.09722222 0.68333333 0.77222222 0.78333333 0.79722222 0.8       ] 	time: 21.975080013275146
+step: 1550 	training acc: [0.16111111 0.78611111 0.82222222 0.83611111 0.84722222 0.83611111] 	time: 21.25471305847168
+step: 1600 	training acc: [0.18333333 0.68888889 0.79722222 0.8        0.83333333 0.82777778] 	time: 20.374422788619995
+step: 1650 	training acc: [0.17222222 0.76944444 0.86111111 0.86666667 0.87222222 0.875     ] 	time: 21.190129041671753
+step: 1700 	training acc: [0.15277778 0.81388889 0.875      0.88055556 0.88611111 0.87777778] 	time: 21.847189903259277
+step: 1750 	training acc: [0.13611111 0.85555556 0.88333333 0.88333333 0.89444444 0.89444444] 	time: 21.7377450466156
+step: 1800 	training acc: [0.14166667 0.8        0.83055556 0.85       0.86388889 0.86388889] 	time: 20.95078182220459
+step: 1850 	training acc: [0.14444444 0.85833333 0.89444444 0.89444444 0.9        0.9       ] 	time: 21.486202716827393
+step: 1900 	training acc: [0.22777778 0.79722222 0.86388889 0.86944444 0.875      0.875     ] 	time: 21.3250892162323
+step: 1950 	training acc: [0.13611111 0.81111111 0.89444444 0.88611111 0.88611111 0.88611111] 	time: 21.558292388916016
+step: 2000 	training acc: [0.14166667 0.81666667 0.91388889 0.92222222 0.92222222 0.925     ] 	time: 21.295726776123047
+***************** Test acc: [0.1617 0.5703 0.605  0.614  0.6157 0.6177 0.618  0.6187 0.619  0.6196
+ 0.62  ] 	time: 104.92966365814209
+step: 2050 	training acc: [0.19166667 0.86388889 0.90277778 0.90833333 0.90833333 0.90833333] 	time: 20.914928436279297
+step: 2100 	training acc: [0.18055556 0.80833333 0.875      0.88333333 0.88611111 0.89722222] 	time: 20.88390827178955
+step: 2150 	training acc: [0.17222222 0.77777778 0.9        0.90277778 0.90555556 0.90833333] 	time: 20.332125902175903
+step: 2200 	training acc: [0.20555556 0.81388889 0.90833333 0.91388889 0.91944444 0.92222222] 	time: 21.10318875312805
+step: 2250 	training acc: [0.16666667 0.88055556 0.89166667 0.89166667 0.89166667 0.89166667] 	time: 20.914012908935547
+step: 2300 	training acc: [0.17222222 0.825      0.89166667 0.89722222 0.89722222 0.90277778] 	time: 20.390790224075317
+step: 2350 	training acc: [0.23333333 0.775      0.89722222 0.90277778 0.90555556 0.90833333] 	time: 20.871795177459717
+step: 2400 	training acc: [0.16388889 0.80277778 0.91111111 0.90833333 0.91388889 0.91666667] 	time: 20.93986701965332
+step: 2450 	training acc: [0.16944444 0.80833333 0.85833333 0.875      0.88611111 0.875     ] 	time: 21.25541925430298
+***************** Test acc: [0.1675 0.522  0.5864 0.6157 0.6206 0.624  0.6255 0.626  0.627  0.627
+ 0.6274] 	time: 97.67918300628662
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t1
+Namespace(data='data/pathvqa_maml/', epoch=0, imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, t_dst=2, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t1/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+Traceback (most recent call last):
+  File "pathVQA_maml_half.py", line 224, in <module>
+    main(args)
+  File "pathVQA_maml_half.py", line 148, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/pathvqa_maml/t2'
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=2, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t2/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.175      0.25       0.26388889 0.28611111 0.28888889 0.29166667] 	time: 0.691279411315918
+step: 50 	training acc: [0.23333333 0.35833333 0.41666667 0.43333333 0.44722222 0.45277778] 	time: 12.616240501403809
+step: 100 	training acc: [0.22222222 0.35       0.4        0.39444444 0.4        0.40833333] 	time: 12.299240827560425
+step: 150 	training acc: [0.13888889 0.325      0.36388889 0.40277778 0.40555556 0.41944444] 	time: 12.282548189163208
+step: 200 	training acc: [0.20555556 0.35       0.48611111 0.48888889 0.49722222 0.50555556] 	time: 19.253000736236572
+step: 250 	training acc: [0.21111111 0.48333333 0.53333333 0.55833333 0.58055556 0.58333333] 	time: 21.115219593048096
+step: 300 	training acc: [0.23055556 0.44444444 0.48333333 0.47222222 0.48055556 0.475     ] 	time: 21.088194131851196
+step: 350 	training acc: [0.14722222 0.39722222 0.50277778 0.56666667 0.59166667 0.60277778] 	time: 20.341558694839478
+step: 400 	training acc: [0.20555556 0.44722222 0.55555556 0.58055556 0.59166667 0.60555556] 	time: 20.709619522094727
+step: 450 	training acc: [0.23333333 0.40555556 0.46388889 0.49444444 0.51111111 0.50555556] 	time: 20.44565725326538
+step: 500 	training acc: [0.14722222 0.50833333 0.58055556 0.60277778 0.61666667 0.61111111] 	time: 21.290542602539062
+step: 550 	training acc: [0.21666667 0.43611111 0.50277778 0.53055556 0.53611111 0.54722222] 	time: 21.434162855148315
+step: 600 	training acc: [0.20555556 0.50555556 0.58055556 0.58611111 0.58888889 0.59722222] 	time: 20.798723697662354
+step: 650 	training acc: [0.2        0.56944444 0.60833333 0.63888889 0.64166667 0.65555556] 	time: 20.997063159942627
+step: 700 	training acc: [0.21944444 0.56944444 0.63888889 0.66666667 0.67222222 0.68333333] 	time: 21.00999140739441
+step: 750 	training acc: [0.18611111 0.475      0.56388889 0.56388889 0.56944444 0.56111111] 	time: 20.263614654541016
+step: 800 	training acc: [0.19166667 0.59722222 0.62222222 0.65555556 0.66388889 0.68611111] 	time: 22.136504411697388
+step: 850 	training acc: [0.19444444 0.55555556 0.625      0.65833333 0.67222222 0.67777778] 	time: 20.600277185440063
+step: 900 	training acc: [0.11111111 0.48333333 0.54444444 0.56388889 0.56388889 0.56666667] 	time: 21.32449960708618
+step: 950 	training acc: [0.24166667 0.59722222 0.65       0.66388889 0.68055556 0.68333333] 	time: 20.84296751022339
+step: 1000 	training acc: [0.19722222 0.55       0.61388889 0.66666667 0.68333333 0.68888889] 	time: 20.321223735809326
+***************** Test acc: [0.165  0.5317 0.6016 0.6216 0.634  0.64   0.643  0.646  0.647  0.6484
+ 0.649 ] 	time: 104.4799599647522
+step: 1050 	training acc: [0.20833333 0.68611111 0.73055556 0.75       0.75555556 0.75833333] 	time: 20.470437049865723
+step: 1100 	training acc: [0.18055556 0.50555556 0.63055556 0.64722222 0.65833333 0.66111111] 	time: 21.72907519340515
+step: 1150 	training acc: [0.225      0.63611111 0.68888889 0.70833333 0.725      0.73333333] 	time: 21.08821725845337
+step: 1200 	training acc: [0.20555556 0.62777778 0.69722222 0.70833333 0.71666667 0.71666667] 	time: 20.45869255065918
+step: 1250 	training acc: [0.17222222 0.65277778 0.73055556 0.75       0.75277778 0.75833333] 	time: 20.716705322265625
+step: 1300 	training acc: [0.125      0.67777778 0.74166667 0.75       0.75       0.75277778] 	time: 21.39160466194153
+step: 1350 	training acc: [0.20277778 0.70277778 0.78333333 0.78611111 0.80277778 0.80555556] 	time: 21.285045623779297
+step: 1400 	training acc: [0.13055556 0.62222222 0.73888889 0.775      0.78055556 0.78888889] 	time: 21.091553211212158
+step: 1450 	training acc: [0.125      0.71944444 0.75       0.775      0.78888889 0.79444444] 	time: 21.0985107421875
+step: 1500 	training acc: [0.19722222 0.78611111 0.83333333 0.85277778 0.86111111 0.86388889] 	time: 21.029908657073975
+step: 1550 	training acc: [0.18611111 0.75833333 0.78055556 0.79722222 0.8        0.80833333] 	time: 21.06400489807129
+step: 1600 	training acc: [0.16944444 0.75       0.78888889 0.81666667 0.82222222 0.83055556] 	time: 20.818616151809692
+step: 1650 	training acc: [0.16666667 0.68333333 0.74166667 0.73888889 0.74444444 0.75      ] 	time: 21.068081617355347
+step: 1700 	training acc: [0.19166667 0.73333333 0.79722222 0.81944444 0.81666667 0.80833333] 	time: 21.218701601028442
+step: 1750 	training acc: [0.18888889 0.825      0.85277778 0.875      0.86944444 0.87222222] 	time: 21.256798028945923
+step: 1800 	training acc: [0.15833333 0.81666667 0.85       0.86111111 0.86111111 0.86111111] 	time: 21.04398536682129
+step: 1850 	training acc: [0.16388889 0.79722222 0.81944444 0.82777778 0.825      0.83055556] 	time: 20.390364408493042
+step: 1900 	training acc: [0.23888889 0.79166667 0.86666667 0.87222222 0.87777778 0.875     ] 	time: 21.044827222824097
+step: 1950 	training acc: [0.18888889 0.80277778 0.85833333 0.86388889 0.875      0.88333333] 	time: 20.89051365852356
+step: 2000 	training acc: [0.16111111 0.66944444 0.74722222 0.76111111 0.77777778 0.775     ] 	time: 21.325961589813232
+***************** Test acc: [0.1694 0.5522 0.607  0.6226 0.625  0.627  0.628  0.6294 0.6304 0.6313
+ 0.6313] 	time: 86.11383008956909
+step: 2050 	training acc: [0.225      0.76388889 0.875      0.89722222 0.90277778 0.90277778] 	time: 11.948182344436646
+step: 2100 	training acc: [0.13888889 0.825      0.83888889 0.85555556 0.85833333 0.85833333] 	time: 12.29809856414795
+step: 2150 	training acc: [0.11388889 0.76388889 0.83888889 0.86111111 0.86111111 0.86666667] 	time: 12.22355604171753
+step: 2200 	training acc: [0.11944444 0.83333333 0.88055556 0.88055556 0.88055556 0.88888889] 	time: 16.909090757369995
+step: 2250 	training acc: [0.16388889 0.76388889 0.85       0.86111111 0.875      0.88888889] 	time: 20.798285961151123
+step: 2300 	training acc: [0.25       0.75277778 0.84166667 0.86111111 0.85833333 0.85833333] 	time: 21.174097776412964
+step: 2350 	training acc: [0.19722222 0.75277778 0.81944444 0.86388889 0.86944444 0.86944444] 	time: 20.913532495498657
+step: 2400 	training acc: [0.14444444 0.77777778 0.86666667 0.86111111 0.875      0.875     ] 	time: 20.595007181167603
+step: 2450 	training acc: [0.13055556 0.81111111 0.88888889 0.91388889 0.91666667 0.91944444] 	time: 20.873236894607544
+***************** Test acc: [0.1702 0.5317 0.5913 0.6133 0.6187 0.6196 0.6206 0.6216 0.6226 0.623
+ 0.624 ] 	time: 103.03044605255127
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t2
+Namespace(data='data/pathvqa_maml/', epoch=0, imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, t_dst=3, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t2/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+Traceback (most recent call last):
+  File "pathVQA_maml_half.py", line 224, in <module>
+    main(args)
+  File "pathVQA_maml_half.py", line 148, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/pathvqa_maml/t3'
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=3, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t3/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.12777778 0.175      0.22222222 0.24166667 0.25833333 0.28055556] 	time: 0.6908566951751709
+step: 50 	training acc: [0.15833333 0.325      0.37222222 0.39444444 0.41111111 0.41944444] 	time: 20.918663024902344
+step: 100 	training acc: [0.14166667 0.37777778 0.47222222 0.50277778 0.51111111 0.50555556] 	time: 20.695197820663452
+step: 150 	training acc: [0.20555556 0.40277778 0.50833333 0.5        0.51666667 0.53055556] 	time: 21.102499961853027
+step: 200 	training acc: [0.18333333 0.41388889 0.45277778 0.48055556 0.5        0.49722222] 	time: 20.924455881118774
+step: 250 	training acc: [0.14444444 0.44166667 0.51944444 0.55833333 0.55833333 0.57222222] 	time: 20.993408203125
+step: 300 	training acc: [0.19722222 0.42222222 0.50277778 0.51944444 0.52777778 0.54166667] 	time: 20.721046209335327
+step: 350 	training acc: [0.13333333 0.44166667 0.51111111 0.52777778 0.53888889 0.54444444] 	time: 20.272653579711914
+step: 400 	training acc: [0.15555556 0.38888889 0.45833333 0.48055556 0.49444444 0.49722222] 	time: 21.429613828659058
+step: 450 	training acc: [0.22777778 0.44722222 0.49166667 0.5        0.51111111 0.5       ] 	time: 21.026858806610107
+step: 500 	training acc: [0.14722222 0.45       0.56388889 0.60277778 0.61388889 0.62222222] 	time: 21.186596393585205
+step: 550 	training acc: [0.175      0.48888889 0.54166667 0.56944444 0.6        0.6       ] 	time: 20.952870845794678
+step: 600 	training acc: [0.09722222 0.45833333 0.52222222 0.54166667 0.55833333 0.56666667] 	time: 20.432960987091064
+step: 650 	training acc: [0.21944444 0.46944444 0.50555556 0.51944444 0.52222222 0.55277778] 	time: 21.074828386306763
+step: 700 	training acc: [0.21388889 0.55833333 0.60277778 0.62222222 0.625      0.61944444] 	time: 20.920631647109985
+step: 750 	training acc: [0.12777778 0.46944444 0.55833333 0.58333333 0.58611111 0.60277778] 	time: 20.606477737426758
+step: 800 	training acc: [0.09722222 0.51111111 0.60555556 0.63611111 0.66111111 0.66944444] 	time: 20.983723163604736
+step: 850 	training acc: [0.1        0.55833333 0.63055556 0.65555556 0.66111111 0.66111111] 	time: 20.519871950149536
+step: 900 	training acc: [0.15555556 0.59444444 0.67222222 0.69722222 0.69444444 0.7       ] 	time: 21.345305919647217
+step: 950 	training acc: [0.13055556 0.55277778 0.60833333 0.61944444 0.61666667 0.61666667] 	time: 21.189830541610718
+step: 1000 	training acc: [0.12222222 0.52222222 0.59166667 0.59722222 0.60555556 0.61111111] 	time: 20.521029233932495
+***************** Test acc: [0.1659 0.5107 0.576  0.5986 0.6104 0.6177 0.621  0.624  0.6255 0.627
+ 0.628 ] 	time: 102.94450998306274
+step: 1050 	training acc: [0.15277778 0.56944444 0.66388889 0.69444444 0.70277778 0.70833333] 	time: 20.422117948532104
+step: 1100 	training acc: [0.19444444 0.57777778 0.63888889 0.66666667 0.66944444 0.66388889] 	time: 21.722359657287598
+step: 1150 	training acc: [0.11111111 0.60277778 0.65555556 0.66944444 0.68333333 0.67777778] 	time: 20.875766277313232
+step: 1200 	training acc: [0.13333333 0.61111111 0.64444444 0.66388889 0.67222222 0.68611111] 	time: 20.71920394897461
+step: 1250 	training acc: [0.17222222 0.68055556 0.71111111 0.70833333 0.71666667 0.72222222] 	time: 20.832297325134277
+step: 1300 	training acc: [0.14444444 0.56666667 0.61388889 0.63055556 0.64166667 0.64166667] 	time: 20.60692262649536
+step: 1350 	training acc: [0.225      0.65833333 0.70833333 0.725      0.73888889 0.73611111] 	time: 21.138184785842896
+step: 1400 	training acc: [0.14166667 0.61111111 0.675      0.68611111 0.68611111 0.68611111] 	time: 13.739504337310791
+step: 1450 	training acc: [0.21111111 0.67777778 0.78333333 0.79166667 0.80555556 0.80555556] 	time: 12.123788595199585
+step: 1500 	training acc: [0.21388889 0.66944444 0.70833333 0.71944444 0.73333333 0.73055556] 	time: 12.150041580200195
+step: 1550 	training acc: [0.11944444 0.65555556 0.71666667 0.73888889 0.75       0.75277778] 	time: 12.080830097198486
+step: 1600 	training acc: [0.14444444 0.73611111 0.78888889 0.8        0.79722222 0.80277778] 	time: 12.118257522583008
+step: 1650 	training acc: [0.17222222 0.73333333 0.78611111 0.79444444 0.80555556 0.80833333] 	time: 18.001928091049194
+step: 1700 	training acc: [0.21666667 0.54722222 0.60277778 0.62222222 0.63611111 0.63888889] 	time: 21.037224054336548
+step: 1750 	training acc: [0.21944444 0.77777778 0.85277778 0.85       0.85555556 0.85555556] 	time: 20.893256425857544
+step: 1800 	training acc: [0.17777778 0.79166667 0.81111111 0.83611111 0.83611111 0.83888889] 	time: 20.678083658218384
+step: 1850 	training acc: [0.25833333 0.72777778 0.75       0.75833333 0.76666667 0.77777778] 	time: 20.335662603378296
+step: 1900 	training acc: [0.15       0.64444444 0.71666667 0.71111111 0.71666667 0.72222222] 	time: 20.324186086654663
+step: 1950 	training acc: [0.19722222 0.81666667 0.85555556 0.87777778 0.87777778 0.88055556] 	time: 20.47158193588257
+step: 2000 	training acc: [0.09166667 0.79444444 0.83611111 0.84444444 0.85       0.85555556] 	time: 21.16036558151245
+***************** Test acc: [0.1702 0.57   0.6016 0.6074 0.6113 0.612  0.6133 0.6143 0.614  0.614
+ 0.614 ] 	time: 104.44599914550781
+step: 2050 	training acc: [0.225      0.825      0.87222222 0.89722222 0.89166667 0.89722222] 	time: 20.96622347831726
+step: 2100 	training acc: [0.175      0.73888889 0.81388889 0.80833333 0.82777778 0.83888889] 	time: 20.65013027191162
+step: 2150 	training acc: [0.09444444 0.75555556 0.79722222 0.81666667 0.82222222 0.825     ] 	time: 20.778635501861572
+step: 2200 	training acc: [0.175      0.79722222 0.84166667 0.85277778 0.85555556 0.85555556] 	time: 21.216524600982666
+step: 2250 	training acc: [0.13888889 0.83055556 0.84722222 0.84722222 0.85833333 0.85277778] 	time: 21.12557029724121
+step: 2300 	training acc: [0.15833333 0.78888889 0.83888889 0.85555556 0.85555556 0.86388889] 	time: 21.052135944366455
+step: 2350 	training acc: [0.17222222 0.75       0.81111111 0.81666667 0.81944444 0.82222222] 	time: 21.575185537338257
+step: 2400 	training acc: [0.14444444 0.80277778 0.87222222 0.86944444 0.86944444 0.87222222] 	time: 21.37501811981201
+step: 2450 	training acc: [0.17777778 0.74444444 0.86388889 0.875      0.88055556 0.88333333] 	time: 20.952935218811035
+***************** Test acc: [0.1649 0.522  0.5796 0.595  0.599  0.6016 0.603  0.603  0.603  0.603
+ 0.603 ] 	time: 102.81352925300598
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t3
+Namespace(data='data/pathvqa_maml/', epoch=0, imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, t_dst=4, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t3/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+Traceback (most recent call last):
+  File "pathVQA_maml_half.py", line 224, in <module>
+    main(args)
+  File "pathVQA_maml_half.py", line 148, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/pathvqa_maml/t4'
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=4, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t4/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.14166667 0.20833333 0.22777778 0.26666667 0.275      0.28055556] 	time: 0.9588217735290527
+step: 50 	training acc: [0.21944444 0.36944444 0.40555556 0.43333333 0.43333333 0.43888889] 	time: 21.111673593521118
+step: 100 	training acc: [0.14444444 0.36111111 0.39166667 0.41388889 0.425      0.43333333] 	time: 21.10415816307068
+step: 150 	training acc: [0.16666667 0.37777778 0.41944444 0.44444444 0.45       0.45555556] 	time: 21.132768154144287
+step: 200 	training acc: [0.125      0.30277778 0.36111111 0.38888889 0.4        0.40277778] 	time: 20.674400568008423
+step: 250 	training acc: [0.225      0.35277778 0.375      0.4        0.41388889 0.425     ] 	time: 21.336443662643433
+step: 300 	training acc: [0.19722222 0.41944444 0.475      0.5        0.52777778 0.54444444] 	time: 21.092176914215088
+step: 350 	training acc: [0.14166667 0.45       0.48888889 0.5        0.50277778 0.50277778] 	time: 20.89525580406189
+step: 400 	training acc: [0.16111111 0.41111111 0.44722222 0.45833333 0.47777778 0.49166667] 	time: 21.18979811668396
+step: 450 	training acc: [0.20833333 0.39722222 0.46111111 0.49722222 0.50833333 0.525     ] 	time: 21.063636302947998
+step: 500 	training acc: [0.10833333 0.35833333 0.43333333 0.45       0.46111111 0.46666667] 	time: 20.80524444580078
+step: 550 	training acc: [0.23888889 0.425      0.49166667 0.52222222 0.53333333 0.54722222] 	time: 20.731489181518555
+step: 600 	training acc: [0.13055556 0.425      0.47222222 0.48888889 0.51111111 0.52777778] 	time: 20.98809266090393
+step: 650 	training acc: [0.15833333 0.41944444 0.48055556 0.49444444 0.51666667 0.52777778] 	time: 20.296164512634277
+step: 700 	training acc: [0.15833333 0.45833333 0.54722222 0.58888889 0.59722222 0.59166667] 	time: 21.1261146068573
+step: 750 	training acc: [0.175      0.475      0.51944444 0.54444444 0.55       0.56388889] 	time: 21.201693773269653
+step: 800 	training acc: [0.17777778 0.51944444 0.58333333 0.58888889 0.58055556 0.59444444] 	time: 16.289543390274048
+step: 850 	training acc: [0.11944444 0.47777778 0.57222222 0.59444444 0.61388889 0.62777778] 	time: 12.166820764541626
+step: 900 	training acc: [0.20277778 0.51388889 0.56666667 0.58055556 0.58333333 0.59444444] 	time: 12.068608522415161
+step: 950 	training acc: [0.15555556 0.49444444 0.53333333 0.55277778 0.56388889 0.55833333] 	time: 12.120348691940308
+step: 1000 	training acc: [0.24722222 0.49444444 0.54722222 0.55277778 0.55277778 0.55555556] 	time: 12.26976203918457
+***************** Test acc: [0.1638 0.4985 0.5586 0.581  0.594  0.603  0.6084 0.612  0.615  0.6167
+ 0.618 ] 	time: 96.5650851726532
+step: 1050 	training acc: [0.16944444 0.52222222 0.58888889 0.61111111 0.61944444 0.63888889] 	time: 21.24903130531311
+step: 1100 	training acc: [0.23055556 0.49444444 0.54166667 0.57777778 0.58611111 0.59166667] 	time: 20.509119510650635
+step: 1150 	training acc: [0.20277778 0.55277778 0.6        0.59444444 0.59444444 0.59444444] 	time: 20.884334325790405
+step: 1200 	training acc: [0.16666667 0.63888889 0.67222222 0.70555556 0.71111111 0.71111111] 	time: 20.80723261833191
+step: 1250 	training acc: [0.21388889 0.54166667 0.59444444 0.61388889 0.61666667 0.62222222] 	time: 21.106794834136963
+step: 1300 	training acc: [0.18888889 0.51111111 0.575      0.58888889 0.6        0.60555556] 	time: 20.996715545654297
+step: 1350 	training acc: [0.21388889 0.64722222 0.70277778 0.73333333 0.73611111 0.73333333] 	time: 21.747849941253662
+step: 1400 	training acc: [0.24444444 0.60833333 0.68888889 0.71944444 0.71666667 0.71944444] 	time: 20.78601837158203
+step: 1450 	training acc: [0.16666667 0.58055556 0.63611111 0.67222222 0.68055556 0.69166667] 	time: 21.56781029701233
+step: 1500 	training acc: [0.12222222 0.53333333 0.59444444 0.61666667 0.61944444 0.61388889] 	time: 20.451555013656616
+step: 1550 	training acc: [0.10277778 0.53055556 0.59444444 0.625      0.64166667 0.65      ] 	time: 21.19874858856201
+step: 1600 	training acc: [0.17222222 0.66111111 0.69444444 0.7        0.69444444 0.70555556] 	time: 20.8227481842041
+step: 1650 	training acc: [0.16666667 0.56111111 0.64166667 0.65555556 0.66944444 0.68055556] 	time: 21.313286066055298
+step: 1700 	training acc: [0.13333333 0.65277778 0.68055556 0.69722222 0.70277778 0.70833333] 	time: 20.479994535446167
+step: 1750 	training acc: [0.12222222 0.6        0.64444444 0.66388889 0.66944444 0.67222222] 	time: 21.099823713302612
+step: 1800 	training acc: [0.13055556 0.64166667 0.675      0.69444444 0.70555556 0.71666667] 	time: 21.05494713783264
+step: 1850 	training acc: [0.19166667 0.63888889 0.68333333 0.69722222 0.71388889 0.71944444] 	time: 21.27745270729065
+step: 1900 	training acc: [0.23611111 0.70555556 0.77777778 0.76666667 0.76388889 0.75      ] 	time: 21.05857491493225
+step: 1950 	training acc: [0.23611111 0.75555556 0.81388889 0.80833333 0.825      0.82222222] 	time: 21.08476495742798
+step: 2000 	training acc: [0.18055556 0.68055556 0.71388889 0.73055556 0.73055556 0.73888889] 	time: 21.65511393547058
+***************** Test acc: [0.1682 0.5073 0.561  0.5757 0.5835 0.5854 0.588  0.59   0.591  0.592
+ 0.5933] 	time: 105.16327333450317
+step: 2050 	training acc: [0.18888889 0.71944444 0.74722222 0.78055556 0.76944444 0.78055556] 	time: 20.83778977394104
+step: 2100 	training acc: [0.15277778 0.72222222 0.76111111 0.75833333 0.75833333 0.75277778] 	time: 21.232956647872925
+step: 2150 	training acc: [0.18333333 0.63055556 0.67222222 0.69444444 0.7        0.71388889] 	time: 20.545780897140503
+step: 2200 	training acc: [0.11944444 0.725      0.78888889 0.79722222 0.8        0.80277778] 	time: 21.826640605926514
+step: 2250 	training acc: [0.20555556 0.75555556 0.76944444 0.78055556 0.77777778 0.78888889] 	time: 21.37963843345642
+step: 2300 	training acc: [0.18888889 0.76666667 0.78055556 0.8        0.81388889 0.80833333] 	time: 20.94950008392334
+step: 2350 	training acc: [0.18333333 0.77777778 0.81111111 0.825      0.83611111 0.83611111] 	time: 21.241453170776367
+step: 2400 	training acc: [0.17222222 0.76944444 0.81111111 0.81111111 0.82222222 0.82222222] 	time: 21.460171222686768
+step: 2450 	training acc: [0.16388889 0.76666667 0.775      0.79444444 0.8        0.8       ] 	time: 21.697242498397827
+***************** Test acc: [0.1733 0.5293 0.569  0.578  0.581  0.583  0.584  0.585  0.5854 0.586
+ 0.5864] 	time: 104.4784414768219
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t4
+Namespace(data='data/pathvqa_maml/', epoch=0, imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, t_dst=5, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t4/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+Traceback (most recent call last):
+  File "pathVQA_maml_half.py", line 224, in <module>
+    main(args)
+  File "pathVQA_maml_half.py", line 148, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/pathvqa_maml/t5'
+Namespace(data='data/pathvqa_maml/', epoch=10000, imgc=3, imgsz=84, k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, output='saved_models', t_dst=5, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :train, b:10000, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/t5/train
+shuffle DB :test, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/test
+step: 0 	training acc: [0.11944444 0.2        0.21388889 0.22777778 0.24722222 0.23333333] 	time: 0.681769847869873
+step: 50 	training acc: [0.20833333 0.34722222 0.41944444 0.41944444 0.425      0.43055556] 	time: 12.772618532180786
+step: 100 	training acc: [0.21388889 0.29722222 0.31944444 0.33055556 0.34166667 0.35277778] 	time: 12.311786890029907
+step: 150 	training acc: [0.21944444 0.35555556 0.375      0.38333333 0.39166667 0.38611111] 	time: 12.17640495300293
+step: 200 	training acc: [0.13055556 0.275      0.34166667 0.38611111 0.40555556 0.41388889] 	time: 15.98490834236145
+step: 250 	training acc: [0.14166667 0.375      0.44722222 0.46111111 0.47777778 0.47777778] 	time: 21.177202463150024
+step: 300 	training acc: [0.13888889 0.39722222 0.44722222 0.47222222 0.48611111 0.49444444] 	time: 21.11518883705139
+step: 350 	training acc: [0.20277778 0.39166667 0.41388889 0.43611111 0.45833333 0.47222222] 	time: 21.048327207565308
+step: 400 	training acc: [0.18333333 0.43055556 0.50277778 0.525      0.54444444 0.54166667] 	time: 19.86951446533203
+step: 450 	training acc: [0.18055556 0.45555556 0.51388889 0.53888889 0.53888889 0.54444444] 	time: 20.99961495399475
+step: 500 	training acc: [0.15555556 0.46666667 0.55       0.56944444 0.56666667 0.575     ] 	time: 20.864209175109863
+step: 550 	training acc: [0.18888889 0.48611111 0.58333333 0.62222222 0.63055556 0.63333333] 	time: 20.994971990585327
+step: 600 	training acc: [0.09722222 0.46388889 0.56388889 0.6        0.58888889 0.59444444] 	time: 21.031792640686035
+step: 650 	training acc: [0.18333333 0.475      0.57777778 0.59722222 0.61666667 0.61388889] 	time: 21.06879997253418
+step: 700 	training acc: [0.18055556 0.37777778 0.45277778 0.47222222 0.51111111 0.51944444] 	time: 21.44070839881897
+step: 750 	training acc: [0.14722222 0.46388889 0.53611111 0.56111111 0.57777778 0.59722222] 	time: 21.187379360198975
+step: 800 	training acc: [0.13888889 0.45277778 0.55       0.56944444 0.59722222 0.59444444] 	time: 21.237544536590576
+step: 850 	training acc: [0.25833333 0.51111111 0.56111111 0.58333333 0.58888889 0.60277778] 	time: 20.527353048324585
+step: 900 	training acc: [0.15833333 0.52777778 0.575      0.59166667 0.59722222 0.6       ] 	time: 21.5006206035614
+step: 950 	training acc: [0.18888889 0.41111111 0.47777778 0.49722222 0.53055556 0.55      ] 	time: 20.373138666152954
+step: 1000 	training acc: [0.15555556 0.39722222 0.44444444 0.475      0.49166667 0.49722222] 	time: 20.45069980621338
+***************** Test acc: [0.1677 0.497  0.5576 0.581  0.592  0.6006 0.606  0.6104 0.6133 0.616
+ 0.618 ] 	time: 103.59582471847534
+step: 1050 	training acc: [0.16111111 0.45277778 0.55       0.56944444 0.58611111 0.60555556] 	time: 20.66123867034912
+step: 1100 	training acc: [0.2        0.50833333 0.56111111 0.57222222 0.58888889 0.59444444] 	time: 21.402616262435913
+step: 1150 	training acc: [0.09722222 0.51666667 0.58888889 0.59166667 0.60555556 0.60833333] 	time: 20.89957618713379
+step: 1200 	training acc: [0.11111111 0.54444444 0.61666667 0.63333333 0.65555556 0.66388889] 	time: 20.571759700775146
+step: 1250 	training acc: [0.11388889 0.51388889 0.60555556 0.61944444 0.63333333 0.63888889] 	time: 20.337753295898438
+step: 1300 	training acc: [0.13055556 0.475      0.54722222 0.56388889 0.58333333 0.59444444] 	time: 20.980623245239258
+step: 1350 	training acc: [0.24166667 0.52777778 0.58888889 0.625      0.63611111 0.64166667] 	time: 20.862642765045166
+step: 1400 	training acc: [0.19166667 0.56666667 0.66111111 0.66944444 0.66666667 0.67777778] 	time: 20.48010277748108
+step: 1450 	training acc: [0.23611111 0.50555556 0.59444444 0.61944444 0.64166667 0.64166667] 	time: 20.71540403366089
+step: 1500 	training acc: [0.14444444 0.55277778 0.6        0.625      0.63888889 0.65555556] 	time: 20.80055046081543
+step: 1550 	training acc: [0.14722222 0.53888889 0.58333333 0.58611111 0.58888889 0.58055556] 	time: 21.548351049423218
+step: 1600 	training acc: [0.29722222 0.59444444 0.64722222 0.68055556 0.7        0.70833333] 	time: 20.507647275924683
+step: 1650 	training acc: [0.14444444 0.58055556 0.62222222 0.64444444 0.64444444 0.64722222] 	time: 21.07418966293335
+step: 1700 	training acc: [0.24166667 0.63611111 0.69722222 0.71944444 0.72777778 0.73333333] 	time: 21.190062046051025
+step: 1750 	training acc: [0.14166667 0.51111111 0.56944444 0.575      0.58055556 0.58055556] 	time: 20.474132776260376
+step: 1800 	training acc: [0.225      0.59166667 0.65555556 0.66388889 0.66666667 0.66944444] 	time: 21.054192543029785
+step: 1850 	training acc: [0.125      0.68333333 0.71944444 0.72777778 0.73333333 0.73055556] 	time: 20.905001401901245
+step: 1900 	training acc: [0.20277778 0.65833333 0.73888889 0.75833333 0.76666667 0.76666667] 	time: 20.315837860107422
+step: 1950 	training acc: [0.25277778 0.61944444 0.66388889 0.68055556 0.68611111 0.69166667] 	time: 20.773158073425293
+step: 2000 	training acc: [0.29722222 0.68888889 0.72777778 0.74722222 0.74166667 0.75555556] 	time: 20.588075637817383
+***************** Test acc: [0.1654 0.4956 0.5596 0.576  0.585  0.59   0.5923 0.5947 0.5957 0.597
+ 0.598 ] 	time: 93.0946261882782
+step: 2050 	training acc: [0.20555556 0.68333333 0.75       0.75       0.75555556 0.75277778] 	time: 12.063563585281372
+step: 2100 	training acc: [0.19444444 0.65833333 0.70833333 0.71666667 0.73611111 0.73611111] 	time: 12.351202249526978
+step: 2150 	training acc: [0.19166667 0.66666667 0.71111111 0.75277778 0.73055556 0.75      ] 	time: 12.258033990859985
+step: 2200 	training acc: [0.18611111 0.72222222 0.775      0.775      0.78333333 0.78333333] 	time: 12.362484216690063
+step: 2250 	training acc: [0.13055556 0.68611111 0.73611111 0.75277778 0.75833333 0.75555556] 	time: 18.64281415939331
+step: 2300 	training acc: [0.15277778 0.70555556 0.78055556 0.78055556 0.77777778 0.78055556] 	time: 20.640672206878662
+step: 2350 	training acc: [0.20277778 0.75       0.78888889 0.79722222 0.80277778 0.80833333] 	time: 20.721099138259888
+step: 2400 	training acc: [0.23333333 0.68888889 0.73055556 0.75833333 0.77777778 0.76944444] 	time: 21.29112410545349
+step: 2450 	training acc: [0.19722222 0.74166667 0.75277778 0.775      0.78055556 0.78333333] 	time: 21.560927629470825
+***************** Test acc: [0.1711 0.5327 0.5728 0.583  0.5874 0.5884 0.5894 0.5903 0.592  0.5923
+ 0.593 ] 	time: 101.35969614982605
+saving model to: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t5
+Namespace(data='data/pathvqa_maml/', epoch=0, feature_output='features', imgc=3, imgsz=84, input='saved_models', k_qry=15, k_spt=5, meta_lr=0.001, n_way=6, nums_t=6, task_num=4, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:3, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:2, padding:0)
+    conv2d:(ch_in:32, ch_out:32, k:3x3, stride:1, padding:0)
+    relu:(True,)
+    bn:(32,)
+    max_pool2d:(k:2, stride:1, padding:0)
+    flatten:()
+    linear:(in:800, out:6)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32x3x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 32x32x3x3 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 6x800 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 6 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 32 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 33702
+shuffle DB :val, b:600, 6-way, 5-shot, 15-query, resize:84
+--loading data from: data/pathvqa_maml/val
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t0/model_epoch0.pth
+***************** Time: 64.37443947792053
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t1/model_epoch0.pth
+***************** Time: 64.40954327583313
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t2/model_epoch0.pth
+***************** Time: 64.2851071357727
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t3/model_epoch0.pth
+***************** Time: 64.69236946105957
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t4/model_epoch0.pth
+***************** Time: 63.9177303314209
+-------load model weight from: saved_models/maml84_miccai2021_optimization_newmethod_6way_5shot_t5/model_epoch0.pth
+***************** Time: 64.24128746986389
+0 / 54000
+100 / 54000
+200 / 54000
+300 / 54000
+400 / 54000
+500 / 54000
+600 / 54000
+700 / 54000
+800 / 54000
+900 / 54000
+1000 / 54000
+1100 / 54000
+1200 / 54000
+1300 / 54000
+1400 / 54000
+1500 / 54000
+1600 / 54000
+1700 / 54000
+1800 / 54000
+1900 / 54000
+2000 / 54000
+2100 / 54000
+2200 / 54000
+2300 / 54000
+2400 / 54000
+2500 / 54000
+2600 / 54000
+2700 / 54000
+2800 / 54000
+2900 / 54000
+3000 / 54000
+3100 / 54000
+3200 / 54000
+3300 / 54000
+3400 / 54000
+3500 / 54000
+3600 / 54000
+3700 / 54000
+3800 / 54000
+3900 / 54000
+4000 / 54000
+4100 / 54000
+4200 / 54000
+4300 / 54000
+4400 / 54000
+4500 / 54000
+4600 / 54000
+4700 / 54000
+4800 / 54000
+4900 / 54000
+5000 / 54000
+5100 / 54000
+5200 / 54000
+5300 / 54000
+5400 / 54000
+5500 / 54000
+5600 / 54000
+5700 / 54000
+5800 / 54000
+5900 / 54000
+6000 / 54000
+6100 / 54000
+6200 / 54000
+6300 / 54000
+6400 / 54000
+6500 / 54000
+6600 / 54000
+6700 / 54000
+6800 / 54000
+6900 / 54000
+7000 / 54000
+7100 / 54000
+7200 / 54000
+7300 / 54000
+7400 / 54000
+7500 / 54000
+7600 / 54000
+7700 / 54000
+7800 / 54000
+7900 / 54000
+8000 / 54000
+8100 / 54000
+8200 / 54000
+8300 / 54000
+8400 / 54000
+8500 / 54000
+8600 / 54000
+8700 / 54000
+8800 / 54000
+8900 / 54000
+9000 / 54000
+9100 / 54000
+9200 / 54000
+9300 / 54000
+9400 / 54000
+9500 / 54000
+9600 / 54000
+9700 / 54000
+9800 / 54000
+9900 / 54000
+10000 / 54000
+10100 / 54000
+10200 / 54000
+10300 / 54000
+10400 / 54000
+10500 / 54000
+10600 / 54000
+10700 / 54000
+10800 / 54000
+10900 / 54000
+11000 / 54000
+11100 / 54000
+11200 / 54000
+11300 / 54000
+11400 / 54000
+11500 / 54000
+11600 / 54000
+11700 / 54000
+11800 / 54000
+11900 / 54000
+12000 / 54000
+12100 / 54000
+12200 / 54000
+12300 / 54000
+12400 / 54000
+12500 / 54000
+12600 / 54000
+12700 / 54000
+12800 / 54000
+12900 / 54000
+13000 / 54000
+13100 / 54000
+13200 / 54000
+13300 / 54000
+13400 / 54000
+13500 / 54000
+13600 / 54000
+13700 / 54000
+13800 / 54000
+13900 / 54000
+14000 / 54000
+14100 / 54000
+14200 / 54000
+14300 / 54000
+14400 / 54000
+14500 / 54000
+14600 / 54000
+14700 / 54000
+14800 / 54000
+14900 / 54000
+15000 / 54000
+15100 / 54000
+15200 / 54000
+15300 / 54000
+15400 / 54000
+15500 / 54000
+15600 / 54000
+15700 / 54000
+15800 / 54000
+15900 / 54000
+16000 / 54000
+16100 / 54000
+16200 / 54000
+16300 / 54000
+16400 / 54000
+16500 / 54000
+16600 / 54000
+16700 / 54000
+16800 / 54000
+16900 / 54000
+17000 / 54000
+17100 / 54000
+17200 / 54000
+17300 / 54000
+17400 / 54000
+17500 / 54000
+17600 / 54000
+17700 / 54000
+17800 / 54000
+17900 / 54000
+18000 / 54000
+18100 / 54000
+18200 / 54000
+18300 / 54000
+18400 / 54000
+18500 / 54000
+18600 / 54000
+18700 / 54000
+18800 / 54000
+18900 / 54000
+19000 / 54000
+19100 / 54000
+19200 / 54000
+19300 / 54000
+19400 / 54000
+19500 / 54000
+19600 / 54000
+19700 / 54000
+19800 / 54000
+19900 / 54000
+20000 / 54000
+20100 / 54000
+20200 / 54000
+20300 / 54000
+20400 / 54000
+20500 / 54000
+20600 / 54000
+20700 / 54000
+20800 / 54000
+20900 / 54000
+21000 / 54000
+21100 / 54000
+21200 / 54000
+21300 / 54000
+21400 / 54000
+21500 / 54000
+21600 / 54000
+21700 / 54000
+21800 / 54000
+21900 / 54000
+22000 / 54000
+22100 / 54000
+22200 / 54000
+22300 / 54000
+22400 / 54000
+22500 / 54000
+22600 / 54000
+22700 / 54000
+22800 / 54000
+22900 / 54000
+23000 / 54000
+23100 / 54000
+23200 / 54000
+23300 / 54000
+23400 / 54000
+23500 / 54000
+23600 / 54000
+23700 / 54000
+23800 / 54000
+23900 / 54000
+24000 / 54000
+24100 / 54000
+24200 / 54000
+24300 / 54000
+24400 / 54000
+24500 / 54000
+24600 / 54000
+24700 / 54000
+24800 / 54000
+24900 / 54000
+25000 / 54000
+25100 / 54000
+25200 / 54000
+25300 / 54000
+25400 / 54000
+25500 / 54000
+25600 / 54000
+25700 / 54000
+25800 / 54000
+25900 / 54000
+26000 / 54000
+26100 / 54000
+26200 / 54000
+26300 / 54000
+26400 / 54000
+26500 / 54000
+26600 / 54000
+26700 / 54000
+26800 / 54000
+26900 / 54000
+27000 / 54000
+27100 / 54000
+27200 / 54000
+27300 / 54000
+27400 / 54000
+27500 / 54000
+27600 / 54000
+27700 / 54000
+27800 / 54000
+27900 / 54000
+28000 / 54000
+28100 / 54000
+28200 / 54000
+28300 / 54000
+28400 / 54000
+28500 / 54000
+28600 / 54000
+28700 / 54000
+28800 / 54000
+28900 / 54000
+29000 / 54000
+29100 / 54000
+29200 / 54000
+29300 / 54000
+29400 / 54000
+29500 / 54000
+29600 / 54000
+29700 / 54000
+29800 / 54000
+29900 / 54000
+30000 / 54000
+30100 / 54000
+30200 / 54000
+30300 / 54000
+30400 / 54000
+30500 / 54000
+30600 / 54000
+30700 / 54000
+30800 / 54000
+30900 / 54000
+31000 / 54000
+31100 / 54000
+31200 / 54000
+31300 / 54000
+31400 / 54000
+31500 / 54000
+31600 / 54000
+31700 / 54000
+31800 / 54000
+31900 / 54000
+32000 / 54000
+32100 / 54000
+32200 / 54000
+32300 / 54000
+32400 / 54000
+32500 / 54000
+32600 / 54000
+32700 / 54000
+32800 / 54000
+32900 / 54000
+33000 / 54000
+33100 / 54000
+33200 / 54000
+33300 / 54000
+33400 / 54000
+33500 / 54000
+33600 / 54000
+33700 / 54000
+33800 / 54000
+33900 / 54000
+34000 / 54000
+34100 / 54000
+34200 / 54000
+34300 / 54000
+34400 / 54000
+34500 / 54000
+34600 / 54000
+34700 / 54000
+34800 / 54000
+34900 / 54000
+35000 / 54000
+35100 / 54000
+35200 / 54000
+35300 / 54000
+35400 / 54000
+35500 / 54000
+35600 / 54000
+35700 / 54000
+35800 / 54000
+35900 / 54000
+36000 / 54000
+36100 / 54000
+36200 / 54000
+36300 / 54000
+36400 / 54000
+36500 / 54000
+36600 / 54000
+36700 / 54000
+36800 / 54000
+36900 / 54000
+37000 / 54000
+37100 / 54000
+37200 / 54000
+37300 / 54000
+37400 / 54000
+37500 / 54000
+37600 / 54000
+37700 / 54000
+37800 / 54000
+37900 / 54000
+38000 / 54000
+38100 / 54000
+38200 / 54000
+38300 / 54000
+38400 / 54000
+38500 / 54000
+38600 / 54000
+38700 / 54000
+38800 / 54000
+38900 / 54000
+39000 / 54000
+39100 / 54000
+39200 / 54000
+39300 / 54000
+39400 / 54000
+39500 / 54000
+39600 / 54000
+39700 / 54000
+39800 / 54000
+39900 / 54000
+40000 / 54000
+40100 / 54000
+40200 / 54000
+40300 / 54000
+40400 / 54000
+40500 / 54000
+40600 / 54000
+40700 / 54000
+40800 / 54000
+40900 / 54000
+41000 / 54000
+41100 / 54000
+41200 / 54000
+41300 / 54000
+41400 / 54000
+41500 / 54000
+41600 / 54000
+41700 / 54000
+41800 / 54000
+41900 / 54000
+42000 / 54000
+42100 / 54000
+42200 / 54000
+42300 / 54000
+42400 / 54000
+42500 / 54000
+42600 / 54000
+42700 / 54000
+42800 / 54000
+42900 / 54000
+43000 / 54000
+43100 / 54000
+43200 / 54000
+43300 / 54000
+43400 / 54000
+43500 / 54000
+43600 / 54000
+43700 / 54000
+43800 / 54000
+43900 / 54000
+44000 / 54000
+44100 / 54000
+44200 / 54000
+44300 / 54000
+44400 / 54000
+44500 / 54000
+44600 / 54000
+44700 / 54000
+44800 / 54000
+44900 / 54000
+45000 / 54000
+45100 / 54000
+45200 / 54000
+45300 / 54000
+45400 / 54000
+45500 / 54000
+45600 / 54000
+45700 / 54000
+45800 / 54000
+45900 / 54000
+46000 / 54000
+46100 / 54000
+46200 / 54000
+46300 / 54000
+46400 / 54000
+46500 / 54000
+46600 / 54000
+46700 / 54000
+46800 / 54000
+46900 / 54000
+47000 / 54000
+47100 / 54000
+47200 / 54000
+47300 / 54000
+47400 / 54000
+47500 / 54000
+47600 / 54000
+47700 / 54000
+47800 / 54000
+47900 / 54000
+48000 / 54000
+48100 / 54000
+48200 / 54000
+48300 / 54000
+48400 / 54000
+48500 / 54000
+48600 / 54000
+48700 / 54000
+48800 / 54000
+48900 / 54000
+49000 / 54000
+49100 / 54000
+49200 / 54000
+49300 / 54000
+49400 / 54000
+49500 / 54000
+49600 / 54000
+49700 / 54000
+49800 / 54000
+49900 / 54000
+50000 / 54000
+50100 / 54000
+50200 / 54000
+50300 / 54000
+50400 / 54000
+50500 / 54000
+50600 / 54000
+50700 / 54000
+50800 / 54000
+50900 / 54000
+51000 / 54000
+51100 / 54000
+51200 / 54000
+51300 / 54000
+51400 / 54000
+51500 / 54000
+51600 / 54000
+51700 / 54000
+51800 / 54000
+51900 / 54000
+52000 / 54000
+52100 / 54000
+52200 / 54000
+52300 / 54000
+52400 / 54000
+52500 / 54000
+52600 / 54000
+52700 / 54000
+52800 / 54000
+52900 / 54000
+53000 / 54000
+53100 / 54000
+53200 / 54000
+53300 / 54000
+53400 / 54000
+53500 / 54000
+53600 / 54000
+53700 / 54000
+53800 / 54000
+53900 / 54000
+tensor([0.8998, 0.8371, 0.8340, 0.8219, 0.8523, 0.8384])
+------- sort (tensor([0.8998, 0.8523, 0.8384, 0.8371, 0.8340, 0.8219]), tensor([0, 4, 5, 1, 2, 3]))
+
+
+//run vqa
+
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=0, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t0/train
+step: 0 	training acc: [0.23333333 0.38333333 0.46666667 0.48333333 0.5        0.48333333] 	time: 0.2720518112182617
+step: 50 	training acc: [0.23333333 0.41666667 0.48333333 0.5        0.5        0.5       ] 	time: 7.887358665466309
+step: 100 	training acc: [0.16666667 0.41666667 0.5        0.45       0.45       0.45      ] 	time: 8.334054231643677
+step: 150 	training acc: [0.26666667 0.38333333 0.35       0.36666667 0.38333333 0.38333333] 	time: 7.434995174407959
+step: 200 	training acc: [0.25       0.5        0.46666667 0.53333333 0.51666667 0.51666667] 	time: 7.7568347454071045
+step: 250 	training acc: [0.21666667 0.5        0.55       0.58333333 0.61666667 0.68333333] 	time: 7.820141315460205
+step: 300 	training acc: [0.26666667 0.53333333 0.55       0.5        0.51666667 0.51666667] 	time: 7.889902830123901
+step: 350 	training acc: [0.23333333 0.55       0.51666667 0.51666667 0.55       0.56666667] 	time: 7.633693218231201
+step: 400 	training acc: [0.16666667 0.6        0.61666667 0.68333333 0.66666667 0.68333333] 	time: 7.823899030685425
+step: 450 	training acc: [0.21666667 0.45       0.5        0.51666667 0.51666667 0.53333333] 	time: 7.715052604675293
+step: 500 	training acc: [0.28333333 0.51666667 0.51666667 0.55       0.56666667 0.56666667] 	time: 7.7229790687561035
+step: 550 	training acc: [0.31666667 0.46666667 0.45       0.46666667 0.46666667 0.48333333] 	time: 7.6032514572143555
+step: 600 	training acc: [0.25       0.53333333 0.5        0.53333333 0.5        0.55      ] 	time: 7.7256553173065186
+step: 650 	training acc: [0.13333333 0.43333333 0.48333333 0.5        0.48333333 0.48333333] 	time: 7.793614387512207
+step: 700 	training acc: [0.23333333 0.48333333 0.55       0.56666667 0.58333333 0.6       ] 	time: 7.906828880310059
+step: 750 	training acc: [0.25       0.41666667 0.38333333 0.35       0.35       0.35      ] 	time: 7.953768968582153
+step: 800 	training acc: [0.26666667 0.5        0.53333333 0.53333333 0.51666667 0.51666667] 	time: 7.882299184799194
+step: 850 	training acc: [0.11666667 0.58333333 0.51666667 0.58333333 0.56666667 0.58333333] 	time: 7.5997278690338135
+step: 900 	training acc: [0.1        0.6        0.56666667 0.56666667 0.58333333 0.61666667] 	time: 8.225317001342773
+step: 950 	training acc: [0.21666667 0.6        0.61666667 0.63333333 0.65       0.66666667] 	time: 7.578257083892822
+step: 1000 	training acc: [0.2        0.53333333 0.58333333 0.6        0.58333333 0.58333333] 	time: 7.778189182281494
+step: 1050 	training acc: [0.23333333 0.63333333 0.7        0.7        0.7        0.7       ] 	time: 7.790818929672241
+step: 1100 	training acc: [0.21666667 0.48333333 0.46666667 0.48333333 0.48333333 0.5       ] 	time: 9.123600721359253
+step: 1150 	training acc: [0.2        0.6        0.63333333 0.66666667 0.61666667 0.61666667] 	time: 11.919984340667725
+step: 1200 	training acc: [0.3        0.61666667 0.63333333 0.63333333 0.63333333 0.66666667] 	time: 12.058341264724731
+step: 1250 	training acc: [0.18333333 0.55       0.56666667 0.56666667 0.58333333 0.6       ] 	time: 11.762450456619263
+step: 1300 	training acc: [0.31666667 0.43333333 0.48333333 0.56666667 0.56666667 0.58333333] 	time: 12.03199052810669
+step: 1350 	training acc: [0.16666667 0.46666667 0.53333333 0.6        0.61666667 0.63333333] 	time: 12.077600240707397
+step: 1400 	training acc: [0.15       0.66666667 0.66666667 0.71666667 0.71666667 0.7       ] 	time: 11.324861764907837
+step: 1450 	training acc: [0.18333333 0.43333333 0.5        0.51666667 0.55       0.6       ] 	time: 7.375490427017212
+step: 1500 	training acc: [0.28333333 0.65       0.71666667 0.73333333 0.76666667 0.78333333] 	time: 6.766165733337402
+step: 1550 	training acc: [0.25       0.58333333 0.6        0.63333333 0.63333333 0.63333333] 	time: 7.355445623397827
+step: 1600 	training acc: [0.25       0.7        0.71666667 0.7        0.71666667 0.71666667] 	time: 6.409610033035278
+step: 1650 	training acc: [0.23333333 0.65       0.71666667 0.7        0.7        0.7       ] 	time: 7.222320079803467
+step: 1700 	training acc: [0.23333333 0.68333333 0.73333333 0.78333333 0.78333333 0.78333333] 	time: 6.726112604141235
+step: 1750 	training acc: [0.18333333 0.58333333 0.6        0.61666667 0.63333333 0.65      ] 	time: 7.520995140075684
+step: 1800 	training acc: [0.23333333 0.71666667 0.73333333 0.71666667 0.71666667 0.73333333] 	time: 6.8183722496032715
+step: 1850 	training acc: [0.25       0.71666667 0.76666667 0.76666667 0.78333333 0.78333333] 	time: 8.665045022964478
+step: 1900 	training acc: [0.26666667 0.58333333 0.7        0.65       0.65       0.63333333] 	time: 11.732676982879639
+step: 1950 	training acc: [0.15       0.7        0.73333333 0.75       0.76666667 0.78333333] 	time: 12.275867700576782
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t0
+Namespace(data='data/vqarad_maml/', epoch=0, imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, t_dst=1, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t0/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+Traceback (most recent call last):
+  File "VQA_RAD_half.py", line 221, in <module>
+    main(args)
+  File "VQA_RAD_half.py", line 145, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/vqarad_maml/t1'
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=1, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t1/train
+step: 0 	training acc: [0.31666667 0.31666667 0.35       0.38333333 0.38333333 0.38333333] 	time: 0.3740057945251465
+step: 50 	training acc: [0.21666667 0.65       0.5        0.55       0.55       0.55      ] 	time: 12.008071660995483
+step: 100 	training acc: [0.23333333 0.41666667 0.36666667 0.43333333 0.4        0.4       ] 	time: 11.38606309890747
+step: 150 	training acc: [0.31666667 0.58333333 0.6        0.61666667 0.56666667 0.58333333] 	time: 11.768075704574585
+step: 200 	training acc: [0.15       0.48333333 0.46666667 0.48333333 0.48333333 0.51666667] 	time: 11.345938205718994
+step: 250 	training acc: [0.33333333 0.53333333 0.45       0.45       0.43333333 0.46666667] 	time: 11.438780307769775
+step: 300 	training acc: [0.3        0.46666667 0.4        0.43333333 0.4        0.4       ] 	time: 11.874468088150024
+step: 350 	training acc: [0.18333333 0.45       0.4        0.51666667 0.45       0.48333333] 	time: 11.634893655776978
+step: 400 	training acc: [0.28333333 0.6        0.61666667 0.61666667 0.58333333 0.6       ] 	time: 11.491981029510498
+step: 450 	training acc: [0.15       0.45       0.46666667 0.43333333 0.48333333 0.48333333] 	time: 11.888910293579102
+step: 500 	training acc: [0.43333333 0.58333333 0.55       0.5        0.53333333 0.53333333] 	time: 11.331286430358887
+step: 550 	training acc: [0.18333333 0.48333333 0.41666667 0.4        0.43333333 0.43333333] 	time: 11.531853675842285
+step: 600 	training acc: [0.25       0.53333333 0.46666667 0.55       0.5        0.5       ] 	time: 11.428913116455078
+step: 650 	training acc: [0.28333333 0.56666667 0.53333333 0.56666667 0.56666667 0.56666667] 	time: 11.834305047988892
+step: 700 	training acc: [0.16666667 0.61666667 0.46666667 0.58333333 0.58333333 0.61666667] 	time: 11.8237886428833
+step: 750 	training acc: [0.28333333 0.51666667 0.55       0.58333333 0.56666667 0.56666667] 	time: 11.936791896820068
+step: 800 	training acc: [0.3        0.66666667 0.71666667 0.71666667 0.7        0.7       ] 	time: 11.857360363006592
+step: 850 	training acc: [0.31666667 0.56666667 0.55       0.55       0.55       0.53333333] 	time: 11.99553108215332
+step: 900 	training acc: [0.21666667 0.5        0.5        0.5        0.51666667 0.53333333] 	time: 11.635105848312378
+step: 950 	training acc: [0.21666667 0.55       0.56666667 0.58333333 0.58333333 0.58333333] 	time: 11.668110847473145
+step: 1000 	training acc: [0.21666667 0.63333333 0.65       0.63333333 0.61666667 0.61666667] 	time: 11.363520860671997
+step: 1050 	training acc: [0.38333333 0.7        0.71666667 0.71666667 0.7        0.71666667] 	time: 12.156475067138672
+step: 1100 	training acc: [0.23333333 0.58333333 0.58333333 0.61666667 0.58333333 0.58333333] 	time: 11.314211130142212
+step: 1150 	training acc: [0.2        0.73333333 0.75       0.75       0.75       0.75      ] 	time: 11.54335355758667
+step: 1200 	training acc: [0.16666667 0.55       0.6        0.6        0.6        0.58333333] 	time: 11.506940126419067
+step: 1250 	training acc: [0.25       0.63333333 0.65       0.66666667 0.68333333 0.7       ] 	time: 11.635436296463013
+step: 1300 	training acc: [0.31666667 0.65       0.71666667 0.73333333 0.71666667 0.73333333] 	time: 11.622629642486572
+step: 1350 	training acc: [0.25       0.71666667 0.7        0.71666667 0.68333333 0.68333333] 	time: 11.398562908172607
+step: 1400 	training acc: [0.35       0.73333333 0.71666667 0.7        0.66666667 0.65      ] 	time: 11.810518741607666
+step: 1450 	training acc: [0.23333333 0.53333333 0.56666667 0.58333333 0.58333333 0.6       ] 	time: 11.568792581558228
+step: 1500 	training acc: [0.25       0.61666667 0.71666667 0.71666667 0.7        0.7       ] 	time: 11.796407222747803
+step: 1550 	training acc: [0.15       0.65       0.7        0.7        0.7        0.68333333] 	time: 11.936142206192017
+step: 1600 	training acc: [0.13333333 0.63333333 0.66666667 0.7        0.7        0.71666667] 	time: 11.774458885192871
+step: 1650 	training acc: [0.15       0.6        0.68333333 0.66666667 0.68333333 0.68333333] 	time: 11.681905031204224
+step: 1700 	training acc: [0.25       0.71666667 0.73333333 0.75       0.75       0.76666667] 	time: 12.32706880569458
+step: 1750 	training acc: [0.15       0.68333333 0.71666667 0.78333333 0.76666667 0.8       ] 	time: 12.181287050247192
+step: 1800 	training acc: [0.35       0.63333333 0.66666667 0.7        0.73333333 0.73333333] 	time: 11.506358861923218
+step: 1850 	training acc: [0.13333333 0.7        0.76666667 0.76666667 0.78333333 0.78333333] 	time: 11.497198820114136
+step: 1900 	training acc: [0.23333333 0.65       0.7        0.66666667 0.7        0.71666667] 	time: 12.142801523208618
+step: 1950 	training acc: [0.26666667 0.76666667 0.8        0.85       0.86666667 0.86666667] 	time: 11.924057245254517
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t1
+Namespace(data='data/vqarad_maml/', epoch=0, imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, t_dst=2, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t1/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+Traceback (most recent call last):
+  File "VQA_RAD_half.py", line 221, in <module>
+    main(args)
+  File "VQA_RAD_half.py", line 145, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/vqarad_maml/t2'
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=2, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t2/train
+step: 0 	training acc: [0.18333333 0.4        0.5        0.51666667 0.5        0.5       ] 	time: 0.4470376968383789
+step: 50 	training acc: [0.31666667 0.41666667 0.53333333 0.5        0.5        0.51666667] 	time: 11.671272277832031
+step: 100 	training acc: [0.28333333 0.51666667 0.55       0.53333333 0.53333333 0.55      ] 	time: 11.730640888214111
+step: 150 	training acc: [0.33333333 0.46666667 0.48333333 0.45       0.45       0.45      ] 	time: 11.932016849517822
+step: 200 	training acc: [0.26666667 0.53333333 0.55       0.53333333 0.51666667 0.5       ] 	time: 12.511659145355225
+step: 250 	training acc: [0.2        0.6        0.51666667 0.58333333 0.51666667 0.56666667] 	time: 11.667273998260498
+step: 300 	training acc: [0.28333333 0.4        0.45       0.48333333 0.46666667 0.48333333] 	time: 11.483793258666992
+step: 350 	training acc: [0.21666667 0.6        0.63333333 0.65       0.63333333 0.63333333] 	time: 11.358395338058472
+step: 400 	training acc: [0.23333333 0.63333333 0.61666667 0.63333333 0.63333333 0.65      ] 	time: 12.094303369522095
+step: 450 	training acc: [0.31666667 0.56666667 0.56666667 0.56666667 0.56666667 0.56666667] 	time: 11.738885164260864
+step: 500 	training acc: [0.18333333 0.53333333 0.53333333 0.5        0.53333333 0.53333333] 	time: 11.550671100616455
+step: 550 	training acc: [0.3        0.58333333 0.6        0.66666667 0.65       0.68333333] 	time: 13.35374665260315
+step: 600 	training acc: [0.2        0.61666667 0.58333333 0.63333333 0.63333333 0.66666667] 	time: 11.441931009292603
+step: 650 	training acc: [0.11666667 0.4        0.43333333 0.45       0.45       0.45      ] 	time: 11.831258058547974
+step: 700 	training acc: [0.3        0.53333333 0.55       0.51666667 0.53333333 0.51666667] 	time: 11.663280010223389
+step: 750 	training acc: [0.2        0.48333333 0.48333333 0.48333333 0.48333333 0.48333333] 	time: 11.596303224563599
+step: 800 	training acc: [0.31666667 0.55       0.66666667 0.63333333 0.65       0.68333333] 	time: 11.765174388885498
+step: 850 	training acc: [0.21666667 0.56666667 0.56666667 0.6        0.61666667 0.61666667] 	time: 11.943508386611938
+step: 900 	training acc: [0.25       0.56666667 0.55       0.55       0.55       0.55      ] 	time: 12.17823076248169
+step: 950 	training acc: [0.21666667 0.46666667 0.5        0.55       0.56666667 0.58333333] 	time: 11.182994604110718
+step: 1000 	training acc: [0.35       0.65       0.65       0.65       0.63333333 0.66666667] 	time: 11.77752947807312
+step: 1050 	training acc: [0.13333333 0.65       0.66666667 0.65       0.65       0.66666667] 	time: 11.519907474517822
+step: 1100 	training acc: [0.3        0.6        0.7        0.7        0.7        0.71666667] 	time: 11.831130981445312
+step: 1150 	training acc: [0.2        0.63333333 0.65       0.63333333 0.63333333 0.63333333] 	time: 11.478535175323486
+step: 1200 	training acc: [0.16666667 0.71666667 0.76666667 0.73333333 0.73333333 0.73333333] 	time: 11.669475555419922
+step: 1250 	training acc: [0.23333333 0.51666667 0.5        0.53333333 0.56666667 0.56666667] 	time: 11.88818073272705
+step: 1300 	training acc: [0.28333333 0.45       0.48333333 0.5        0.53333333 0.53333333] 	time: 12.093458414077759
+step: 1350 	training acc: [0.2        0.58333333 0.63333333 0.68333333 0.71666667 0.75      ] 	time: 12.060921907424927
+step: 1400 	training acc: [0.35       0.75       0.75       0.73333333 0.73333333 0.71666667] 	time: 11.839880466461182
+step: 1450 	training acc: [0.2        0.76666667 0.73333333 0.75       0.73333333 0.73333333] 	time: 11.991099119186401
+step: 1500 	training acc: [0.41666667 0.7        0.68333333 0.63333333 0.63333333 0.61666667] 	time: 11.254320621490479
+step: 1550 	training acc: [0.23333333 0.68333333 0.73333333 0.7        0.68333333 0.68333333] 	time: 11.810455560684204
+step: 1600 	training acc: [0.25       0.61666667 0.65       0.68333333 0.68333333 0.68333333] 	time: 12.211008787155151
+step: 1650 	training acc: [0.13333333 0.58333333 0.63333333 0.63333333 0.66666667 0.65      ] 	time: 11.10130524635315
+step: 1700 	training acc: [0.15       0.63333333 0.63333333 0.66666667 0.66666667 0.7       ] 	time: 6.78387713432312
+step: 1750 	training acc: [0.35       0.78333333 0.83333333 0.85       0.85       0.85      ] 	time: 3.751699209213257
+step: 1800 	training acc: [0.38333333 0.73333333 0.73333333 0.73333333 0.75       0.75      ] 	time: 3.71679425239563
+step: 1850 	training acc: [0.26666667 0.73333333 0.76666667 0.78333333 0.78333333 0.76666667] 	time: 3.763169050216675
+step: 1900 	training acc: [0.33333333 0.71666667 0.66666667 0.71666667 0.68333333 0.68333333] 	time: 3.800321578979492
+step: 1950 	training acc: [0.23333333 0.68333333 0.76666667 0.76666667 0.78333333 0.76666667] 	time: 3.7071661949157715
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t2
+Namespace(data='data/vqarad_maml/', epoch=0, imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, t_dst=3, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t2/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+Traceback (most recent call last):
+  File "VQA_RAD_half.py", line 221, in <module>
+    main(args)
+  File "VQA_RAD_half.py", line 145, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/vqarad_maml/t3'
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=3, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t3/train
+step: 0 	training acc: [0.23333333 0.28333333 0.38333333 0.43333333 0.46666667 0.46666667] 	time: 0.2728712558746338
+step: 50 	training acc: [0.28333333 0.46666667 0.41666667 0.36666667 0.36666667 0.38333333] 	time: 3.9034483432769775
+step: 100 	training acc: [0.15       0.45       0.4        0.46666667 0.45       0.46666667] 	time: 3.6767873764038086
+step: 150 	training acc: [0.28333333 0.46666667 0.5        0.48333333 0.53333333 0.53333333] 	time: 3.6623940467834473
+step: 200 	training acc: [0.2        0.48333333 0.41666667 0.43333333 0.43333333 0.41666667] 	time: 3.6438403129577637
+step: 250 	training acc: [0.18333333 0.5        0.45       0.45       0.45       0.45      ] 	time: 3.7708730697631836
+step: 300 	training acc: [0.23333333 0.46666667 0.51666667 0.5        0.53333333 0.53333333] 	time: 3.7385993003845215
+step: 350 	training acc: [0.23333333 0.53333333 0.55       0.55       0.51666667 0.53333333] 	time: 3.747990608215332
+step: 400 	training acc: [0.18333333 0.41666667 0.41666667 0.41666667 0.45       0.45      ] 	time: 7.080291271209717
+step: 450 	training acc: [0.23333333 0.53333333 0.6        0.56666667 0.6        0.56666667] 	time: 8.034093379974365
+step: 500 	training acc: [0.18333333 0.53333333 0.58333333 0.58333333 0.58333333 0.6       ] 	time: 8.317864656448364
+step: 550 	training acc: [0.31666667 0.48333333 0.53333333 0.53333333 0.6        0.6       ] 	time: 8.004698991775513
+step: 600 	training acc: [0.31666667 0.6        0.56666667 0.6        0.58333333 0.61666667] 	time: 8.285799741744995
+step: 650 	training acc: [0.35       0.66666667 0.6        0.63333333 0.66666667 0.66666667] 	time: 7.928696393966675
+step: 700 	training acc: [0.26666667 0.61666667 0.6        0.58333333 0.6        0.6       ] 	time: 7.938932180404663
+step: 750 	training acc: [0.2        0.55       0.58333333 0.61666667 0.61666667 0.63333333] 	time: 7.867635011672974
+step: 800 	training acc: [0.35       0.58333333 0.65       0.66666667 0.65       0.65      ] 	time: 7.9205310344696045
+step: 850 	training acc: [0.26666667 0.48333333 0.51666667 0.53333333 0.51666667 0.51666667] 	time: 8.165166139602661
+step: 900 	training acc: [0.23333333 0.6        0.6        0.61666667 0.63333333 0.63333333] 	time: 8.117473602294922
+step: 950 	training acc: [0.38333333 0.58333333 0.66666667 0.66666667 0.66666667 0.68333333] 	time: 8.260843515396118
+step: 1000 	training acc: [0.13333333 0.58333333 0.65       0.66666667 0.68333333 0.7       ] 	time: 7.977811098098755
+step: 1050 	training acc: [0.18333333 0.61666667 0.61666667 0.65       0.68333333 0.68333333] 	time: 7.437847852706909
+step: 1100 	training acc: [0.28333333 0.68333333 0.63333333 0.66666667 0.65       0.65      ] 	time: 7.661182403564453
+step: 1150 	training acc: [0.2        0.56666667 0.63333333 0.63333333 0.61666667 0.61666667] 	time: 7.5640363693237305
+step: 1200 	training acc: [0.08333333 0.63333333 0.73333333 0.73333333 0.73333333 0.73333333] 	time: 7.718033313751221
+step: 1250 	training acc: [0.2        0.58333333 0.61666667 0.61666667 0.6        0.56666667] 	time: 7.457436800003052
+step: 1300 	training acc: [0.15       0.53333333 0.61666667 0.6        0.6        0.6       ] 	time: 7.418781757354736
+step: 1350 	training acc: [0.2        0.68333333 0.7        0.71666667 0.71666667 0.7       ] 	time: 7.540056228637695
+step: 1400 	training acc: [0.23333333 0.73333333 0.75       0.76666667 0.76666667 0.75      ] 	time: 7.969761848449707
+step: 1450 	training acc: [0.23333333 0.68333333 0.75       0.76666667 0.78333333 0.78333333] 	time: 7.784240007400513
+step: 1500 	training acc: [0.28333333 0.6        0.61666667 0.65       0.66666667 0.66666667] 	time: 8.068991899490356
+step: 1550 	training acc: [0.23333333 0.65       0.7        0.71666667 0.75       0.76666667] 	time: 7.34787130355835
+step: 1600 	training acc: [0.13333333 0.6        0.66666667 0.66666667 0.68333333 0.68333333] 	time: 7.5727667808532715
+step: 1650 	training acc: [0.28333333 0.63333333 0.68333333 0.7        0.71666667 0.71666667] 	time: 7.924105882644653
+step: 1700 	training acc: [0.15       0.71666667 0.76666667 0.73333333 0.76666667 0.76666667] 	time: 8.509230852127075
+step: 1750 	training acc: [0.31666667 0.6        0.71666667 0.73333333 0.73333333 0.73333333] 	time: 7.8919517993927
+step: 1800 	training acc: [0.23333333 0.68333333 0.68333333 0.7        0.71666667 0.71666667] 	time: 7.47967529296875
+step: 1850 	training acc: [0.35       0.73333333 0.76666667 0.78333333 0.78333333 0.78333333] 	time: 7.678327322006226
+step: 1900 	training acc: [0.33333333 0.7        0.78333333 0.81666667 0.81666667 0.83333333] 	time: 7.285212278366089
+step: 1950 	training acc: [0.15       0.66666667 0.71666667 0.71666667 0.73333333 0.75      ] 	time: 7.278168439865112
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t3
+Namespace(data='data/vqarad_maml/', epoch=0, imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, t_dst=4, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t3/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+Traceback (most recent call last):
+  File "VQA_RAD_half.py", line 221, in <module>
+    main(args)
+  File "VQA_RAD_half.py", line 145, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/vqarad_maml/t4'
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=4, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t4/train
+step: 0 	training acc: [0.3        0.33333333 0.45       0.48333333 0.41666667 0.43333333] 	time: 0.3761940002441406
+step: 50 	training acc: [0.26666667 0.53333333 0.55       0.55       0.55       0.55      ] 	time: 7.347170114517212
+step: 100 	training acc: [0.16666667 0.45       0.45       0.43333333 0.45       0.45      ] 	time: 8.137454271316528
+step: 150 	training acc: [0.28333333 0.5        0.38333333 0.51666667 0.46666667 0.48333333] 	time: 8.029865503311157
+step: 200 	training acc: [0.23333333 0.58333333 0.53333333 0.56666667 0.61666667 0.61666667] 	time: 7.699155807495117
+step: 250 	training acc: [0.26666667 0.53333333 0.48333333 0.53333333 0.51666667 0.5       ] 	time: 7.849446773529053
+step: 300 	training acc: [0.26666667 0.55       0.61666667 0.53333333 0.55       0.55      ] 	time: 7.9460365772247314
+step: 350 	training acc: [0.18333333 0.58333333 0.5        0.56666667 0.51666667 0.55      ] 	time: 8.053794622421265
+step: 400 	training acc: [0.2        0.56666667 0.48333333 0.51666667 0.56666667 0.56666667] 	time: 7.539883852005005
+step: 450 	training acc: [0.2        0.53333333 0.66666667 0.66666667 0.66666667 0.66666667] 	time: 7.977421283721924
+step: 500 	training acc: [0.3        0.55       0.61666667 0.56666667 0.56666667 0.58333333] 	time: 7.006194114685059
+step: 550 	training acc: [0.2        0.48333333 0.51666667 0.53333333 0.51666667 0.51666667] 	time: 7.41754674911499
+step: 600 	training acc: [0.28333333 0.45       0.48333333 0.46666667 0.48333333 0.51666667] 	time: 7.669741630554199
+step: 650 	training acc: [0.16666667 0.5        0.45       0.48333333 0.48333333 0.51666667] 	time: 7.331135272979736
+step: 700 	training acc: [0.3        0.53333333 0.56666667 0.6        0.6        0.6       ] 	time: 7.57712984085083
+step: 750 	training acc: [0.16666667 0.61666667 0.58333333 0.63333333 0.6        0.6       ] 	time: 8.243854522705078
+step: 800 	training acc: [0.25       0.6        0.58333333 0.6        0.58333333 0.58333333] 	time: 8.308289051055908
+step: 850 	training acc: [0.23333333 0.46666667 0.56666667 0.53333333 0.56666667 0.55      ] 	time: 8.649244785308838
+step: 900 	training acc: [0.23333333 0.56666667 0.58333333 0.63333333 0.63333333 0.61666667] 	time: 9.141818284988403
+step: 950 	training acc: [0.21666667 0.56666667 0.55       0.56666667 0.56666667 0.55      ] 	time: 8.36445164680481
+step: 1000 	training acc: [0.23333333 0.53333333 0.55       0.55       0.56666667 0.58333333] 	time: 8.350945711135864
+step: 1050 	training acc: [0.18333333 0.58333333 0.63333333 0.7        0.68333333 0.68333333] 	time: 8.489072322845459
+step: 1100 	training acc: [0.3        0.58333333 0.66666667 0.68333333 0.68333333 0.68333333] 	time: 7.9856789112091064
+step: 1150 	training acc: [0.23333333 0.66666667 0.65       0.65       0.65       0.65      ] 	time: 7.86116099357605
+step: 1200 	training acc: [0.25       0.63333333 0.7        0.7        0.75       0.75      ] 	time: 7.510050058364868
+step: 1250 	training acc: [0.25       0.51666667 0.51666667 0.53333333 0.55       0.56666667] 	time: 8.147988319396973
+step: 1300 	training acc: [0.3        0.66666667 0.7        0.71666667 0.73333333 0.73333333] 	time: 8.123003244400024
+step: 1350 	training acc: [0.23333333 0.53333333 0.56666667 0.6        0.6        0.61666667] 	time: 7.432412385940552
+step: 1400 	training acc: [0.21666667 0.61666667 0.75       0.76666667 0.78333333 0.78333333] 	time: 7.998740196228027
+step: 1450 	training acc: [0.28333333 0.61666667 0.66666667 0.63333333 0.63333333 0.63333333] 	time: 7.980728626251221
+step: 1500 	training acc: [0.28333333 0.58333333 0.58333333 0.56666667 0.56666667 0.58333333] 	time: 7.67369818687439
+step: 1550 	training acc: [0.21666667 0.73333333 0.71666667 0.73333333 0.73333333 0.73333333] 	time: 8.99240255355835
+step: 1600 	training acc: [0.26666667 0.68333333 0.7        0.71666667 0.73333333 0.75      ] 	time: 8.104742288589478
+step: 1650 	training acc: [0.26666667 0.66666667 0.78333333 0.78333333 0.78333333 0.78333333] 	time: 7.477175951004028
+step: 1700 	training acc: [0.28333333 0.63333333 0.68333333 0.73333333 0.73333333 0.73333333] 	time: 8.523011207580566
+step: 1750 	training acc: [0.33333333 0.75       0.8        0.8        0.78333333 0.76666667] 	time: 8.043517351150513
+step: 1800 	training acc: [0.3        0.73333333 0.76666667 0.76666667 0.75       0.75      ] 	time: 7.705997943878174
+step: 1850 	training acc: [0.35       0.71666667 0.81666667 0.81666667 0.81666667 0.81666667] 	time: 8.173899173736572
+step: 1900 	training acc: [0.23333333 0.55       0.6        0.56666667 0.6        0.61666667] 	time: 8.585401058197021
+step: 1950 	training acc: [0.2        0.66666667 0.71666667 0.73333333 0.73333333 0.7       ] 	time: 7.847692012786865
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t4
+Namespace(data='data/vqarad_maml/', epoch=0, imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, t_dst=5, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t4/model_epoch0.pth
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+Traceback (most recent call last):
+  File "VQA_RAD_half.py", line 221, in <module>
+    main(args)
+  File "VQA_RAD_half.py", line 145, in main
+    shutil.copytree(src, dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/home/coder/miniconda/envs/mmq/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'data/vqarad_maml/t5'
+Namespace(data='data/vqarad_maml/', epoch=10000, imgc=1, imgsz=84, k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, output='saved_models', t_dst=5, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :train, b:10000, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/t5/train
+step: 0 	training acc: [0.31666667 0.35       0.4        0.43333333 0.43333333 0.45      ] 	time: 0.3963475227355957
+step: 50 	training acc: [0.2        0.56666667 0.48333333 0.46666667 0.48333333 0.48333333] 	time: 7.8854660987854
+step: 100 	training acc: [0.15       0.41666667 0.38333333 0.38333333 0.4        0.4       ] 	time: 7.882968425750732
+step: 150 	training acc: [0.23333333 0.58333333 0.48333333 0.58333333 0.53333333 0.56666667] 	time: 7.8650617599487305
+step: 200 	training acc: [0.3        0.6        0.56666667 0.61666667 0.63333333 0.61666667] 	time: 8.5149564743042
+step: 250 	training acc: [0.28333333 0.5        0.56666667 0.48333333 0.56666667 0.51666667] 	time: 8.765309572219849
+step: 300 	training acc: [0.26666667 0.58333333 0.55       0.56666667 0.56666667 0.55      ] 	time: 8.123585939407349
+step: 350 	training acc: [0.23333333 0.56666667 0.55       0.53333333 0.53333333 0.53333333] 	time: 8.162842273712158
+step: 400 	training acc: [0.35       0.48333333 0.5        0.48333333 0.5        0.5       ] 	time: 7.949620008468628
+step: 450 	training acc: [0.13333333 0.53333333 0.51666667 0.56666667 0.58333333 0.58333333] 	time: 8.227954864501953
+step: 500 	training acc: [0.13333333 0.53333333 0.51666667 0.5        0.5        0.5       ] 	time: 7.401165962219238
+step: 550 	training acc: [0.35       0.4        0.53333333 0.53333333 0.51666667 0.53333333] 	time: 7.9634621143341064
+step: 600 	training acc: [0.26666667 0.55       0.6        0.58333333 0.58333333 0.58333333] 	time: 8.32001781463623
+step: 650 	training acc: [0.15       0.43333333 0.55       0.5        0.55       0.55      ] 	time: 7.655714988708496
+step: 700 	training acc: [0.2        0.5        0.58333333 0.58333333 0.58333333 0.58333333] 	time: 8.143262386322021
+step: 750 	training acc: [0.23333333 0.58333333 0.56666667 0.58333333 0.58333333 0.58333333] 	time: 8.082202196121216
+step: 800 	training acc: [0.16666667 0.48333333 0.6        0.58333333 0.63333333 0.63333333] 	time: 8.632443904876709
+step: 850 	training acc: [0.23333333 0.61666667 0.63333333 0.66666667 0.66666667 0.65      ] 	time: 4.424370765686035
+step: 900 	training acc: [0.2        0.53333333 0.6        0.6        0.6        0.6       ] 	time: 3.8402602672576904
+step: 950 	training acc: [0.2        0.56666667 0.58333333 0.6        0.6        0.6       ] 	time: 3.708449125289917
+step: 1000 	training acc: [0.18333333 0.53333333 0.61666667 0.55       0.56666667 0.55      ] 	time: 3.6723575592041016
+step: 1050 	training acc: [0.33333333 0.51666667 0.51666667 0.56666667 0.58333333 0.58333333] 	time: 3.5705437660217285
+step: 1100 	training acc: [0.46666667 0.75       0.73333333 0.73333333 0.73333333 0.73333333] 	time: 3.6910417079925537
+step: 1150 	training acc: [0.35       0.63333333 0.68333333 0.7        0.71666667 0.7       ] 	time: 3.764132261276245
+step: 1200 	training acc: [0.33333333 0.7        0.68333333 0.66666667 0.68333333 0.68333333] 	time: 3.680415630340576
+step: 1250 	training acc: [0.2        0.58333333 0.61666667 0.63333333 0.65       0.65      ] 	time: 3.7831265926361084
+step: 1300 	training acc: [0.21666667 0.61666667 0.66666667 0.66666667 0.66666667 0.68333333] 	time: 3.7345542907714844
+step: 1350 	training acc: [0.18333333 0.56666667 0.65       0.68333333 0.7        0.7       ] 	time: 3.713355541229248
+step: 1400 	training acc: [0.26666667 0.65       0.66666667 0.7        0.71666667 0.71666667] 	time: 3.65564227104187
+step: 1450 	training acc: [0.2        0.55       0.58333333 0.63333333 0.66666667 0.66666667] 	time: 3.7818751335144043
+step: 1500 	training acc: [0.25 0.55 0.65 0.65 0.65 0.65] 	time: 3.6882572174072266
+step: 1550 	training acc: [0.18333333 0.61666667 0.66666667 0.7        0.7        0.7       ] 	time: 3.6668918132781982
+step: 1600 	training acc: [0.2        0.58333333 0.63333333 0.65       0.63333333 0.65      ] 	time: 3.652151107788086
+step: 1650 	training acc: [0.31666667 0.66666667 0.68333333 0.68333333 0.66666667 0.7       ] 	time: 6.292356252670288
+step: 1700 	training acc: [0.25       0.65       0.66666667 0.7        0.71666667 0.75      ] 	time: 8.472762107849121
+step: 1750 	training acc: [0.2        0.76666667 0.8        0.78333333 0.76666667 0.76666667] 	time: 8.88071584701538
+step: 1800 	training acc: [0.21666667 0.73333333 0.78333333 0.83333333 0.83333333 0.85      ] 	time: 8.419651746749878
+step: 1850 	training acc: [0.4        0.65       0.65       0.66666667 0.7        0.7       ] 	time: 8.421003818511963
+step: 1900 	training acc: [0.21666667 0.65       0.73333333 0.7        0.71666667 0.73333333] 	time: 8.071019649505615
+step: 1950 	training acc: [0.21666667 0.6        0.71666667 0.73333333 0.73333333 0.73333333] 	time: 7.845402956008911
+saving model to: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t5
+Namespace(data='data/vqarad_maml/', epoch=0, feature_output='features', imgc=1, imgsz=84, input='saved_models', k_qry=3, k_spt=3, meta_lr=0.001, n_way=4, nums_t=6, task_num=5, update_lr=0.01, update_step=5, update_step_test=10)
+Meta(
+  (net): Learner(
+    conv2d:(ch_in:1, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:3x3, stride:2, padding:0)
+    relu:(True,)
+    bn:(64,)
+    conv2d:(ch_in:64, ch_out:64, k:2x2, stride:1, padding:0)
+    relu:(True,)
+    bn:(64,)
+    flatten:()
+    linear:(in:4096, out:4)
+    
+    (vars): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64x1x3x3 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (8): Parameter containing: [torch.cuda.FloatTensor of size 64x64x3x3 (GPU 0)]
+        (9): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (10): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (11): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (12): Parameter containing: [torch.cuda.FloatTensor of size 64x64x2x2 (GPU 0)]
+        (13): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (14): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (15): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (16): Parameter containing: [torch.cuda.FloatTensor of size 4x4096 (GPU 0)]
+        (17): Parameter containing: [torch.cuda.FloatTensor of size 4 (GPU 0)]
+    )
+    (vars_bn): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (5): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (6): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+        (7): Parameter containing: [torch.cuda.FloatTensor of size 64 (GPU 0)]
+    )
+  )
+)
+Total trainable tensors: 107844
+shuffle DB :val, b:600, 4-way, 3-shot, 3-query, resize:84
+--loading data from: data/vqarad_maml/val
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t0/model_epoch0.pth
+***************** Time: 20.521486282348633
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t1/model_epoch0.pth
+***************** Time: 19.672303915023804
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t2/model_epoch0.pth
+***************** Time: 19.88350772857666
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t3/model_epoch0.pth
+***************** Time: 20.185656309127808
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t4/model_epoch0.pth
+***************** Time: 20.185194730758667
+-------load model weight from: saved_models/VQARAD_maml84_miccai2021_newmethod_4way_3shot_t5/model_epoch0.pth
+/home/coder/miniconda/envs/mmq/lib/python3.6/site-packages/torch/nn/functional.py:995: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+***************** Time: 20.66549801826477
+0 / 7200
+100 / 7200
+200 / 7200
+300 / 7200
+400 / 7200
+500 / 7200
+600 / 7200
+700 / 7200
+800 / 7200
+900 / 7200
+1000 / 7200
+1100 / 7200
+1200 / 7200
+1300 / 7200
+1400 / 7200
+1500 / 7200
+1600 / 7200
+1700 / 7200
+1800 / 7200
+1900 / 7200
+2000 / 7200
+2100 / 7200
+2200 / 7200
+2300 / 7200
+2400 / 7200
+2500 / 7200
+2600 / 7200
+2700 / 7200
+2800 / 7200
+2900 / 7200
+3000 / 7200
+3100 / 7200
+3200 / 7200
+3300 / 7200
+3400 / 7200
+3500 / 7200
+3600 / 7200
+3700 / 7200
+3800 / 7200
+3900 / 7200
+4000 / 7200
+4100 / 7200
+4200 / 7200
+4300 / 7200
+4400 / 7200
+4500 / 7200
+4600 / 7200
+4700 / 7200
+4800 / 7200
+4900 / 7200
+5000 / 7200
+5100 / 7200
+5200 / 7200
+5300 / 7200
+5400 / 7200
+5500 / 7200
+5600 / 7200
+5700 / 7200
+5800 / 7200
+5900 / 7200
+6000 / 7200
+6100 / 7200
+6200 / 7200
+6300 / 7200
+6400 / 7200
+6500 / 7200
+6600 / 7200
+6700 / 7200
+6800 / 7200
+6900 / 7200
+7000 / 7200
+7100 / 7200
+tensor([0.7269, 0.7438, 0.7269, 0.7285, 0.7402, 0.7197])
+------- sort (tensor([0.7438, 0.7402, 0.7285, 0.7269, 0.7269, 0.7197]), tensor([1, 4, 3, 2, 0, 5]))

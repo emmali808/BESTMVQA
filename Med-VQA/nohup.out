@@ -1,0 +1,1925 @@
+/home/coder/miniconda/envs/CR/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'language_model.WordEmbedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+2023-10-27 08:53:33,954 INFO     >>>The net is:
+2023-10-27 08:53:33,955 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 08:53:33,958 INFO     >>>The args is:
+2023-10-27 08:53:33,958 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=2, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+<pymysql.connections.Connection object at 0x7f03e0b8b780>
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+load initial weights MAML from: /home/coder/projects/Med-VQA/data/pretrained_maml.weights
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+Loading embedding tfidf and weights from file
+Load embedding tfidf and weights from file successfully
+2023-10-27 08:53:51,761 INFO     -------[Epoch]:0-------
+2023-10-27 08:53:51,762 INFO     [Train] Loss:1.588890 , Train_Acc:29.993473%
+2023-10-27 08:53:52,912 INFO     [Validate] Val_Acc:29.268293%  |  Open_ACC:2.777778%   |  Close_ACC:46.863468%
+2023-10-27 08:53:54,688 INFO     [Result] The best acc is 29.268293% at epoch 0
+451 180.0 271.0
+2023-10-27 08:54:10,542 INFO     -------[Epoch]:1-------
+2023-10-27 08:54:10,545 INFO     [Train] Loss:0.046608 , Train_Acc:36.553524%
+2023-10-27 08:54:11,515 INFO     [Validate] Val_Acc:32.372505%  |  Open_ACC:6.111111%   |  Close_ACC:49.815498%
+2023-10-27 08:54:13,132 INFO     [Result] The best acc is 32.372505% at epoch 1
+451 180.0 271.0
+2023-10-27 08:54:13,864 INFO     [Evaluate] Val_Acc:32.372505%  |  Open_ACC:6.145251%   |  Close_ACC:49.632355%
+2023-10-27 08:54:13,868 INFO     >>>The net is:
+2023-10-27 08:54:13,868 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 08:54:13,870 INFO     >>>The args is:
+2023-10-27 08:54:13,870 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=2, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+451 179.0 272.0
+2023-10-27 08:54:14,901 INFO     [Evaluate] Val_Acc:32.372505%  |  Open_ACC:6.145251%   |  Close_ACC:49.632355%
+451 179.0 272.0
+/home/coder/miniconda/envs/CR/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'language_model.WordEmbedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+2023-10-27 09:11:36,346 INFO     >>>The net is:
+2023-10-27 09:11:36,347 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:11:36,352 INFO     >>>The args is:
+2023-10-27 09:11:36,352 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=2, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+<pymysql.connections.Connection object at 0x7f7f96ef9710>
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+load initial weights MAML from: /home/coder/projects/Med-VQA/data/pretrained_maml.weights
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+Loading embedding tfidf and weights from file
+Load embedding tfidf and weights from file successfully
+2023-10-27 09:11:54,638 INFO     -------[Epoch]:0-------
+2023-10-27 09:11:54,638 INFO     [Train] Loss:1.588890 , Train_Acc:29.993473%
+2023-10-27 09:11:56,115 INFO     [Validate] Val_Acc:29.268293%  |  Open_ACC:2.777778%   |  Close_ACC:46.863468%
+2023-10-27 09:11:58,031 INFO     [Result] The best acc is 29.268293% at epoch 0
+451 180.0 271.0
+2023-10-27 09:12:13,765 INFO     -------[Epoch]:1-------
+2023-10-27 09:12:13,765 INFO     [Train] Loss:0.046608 , Train_Acc:36.553524%
+2023-10-27 09:12:15,075 INFO     [Validate] Val_Acc:32.372505%  |  Open_ACC:6.111111%   |  Close_ACC:49.815498%
+2023-10-27 09:12:17,133 INFO     [Result] The best acc is 32.372505% at epoch 1
+451 180.0 271.0
+2023-10-27 09:12:18,126 INFO     [Evaluate] Val_Acc:32.372505%  |  Open_ACC:6.145251%   |  Close_ACC:49.632355%
+2023-10-27 09:12:18,144 INFO     >>>The net is:
+2023-10-27 09:12:18,144 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:12:18,146 INFO     >>>The args is:
+2023-10-27 09:12:18,147 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=2, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+451 179.0 272.0
+2023-10-27 09:12:19,017 INFO     [Evaluate] Val_Acc:32.372505%  |  Open_ACC:6.145251%   |  Close_ACC:49.632355%
+451 179.0 272.0
+/home/coder/miniconda/envs/CR/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'language_model.WordEmbedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+2023-10-27 09:35:46,660 INFO     >>>The net is:
+2023-10-27 09:35:46,660 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:35:46,662 INFO     >>>The args is:
+2023-10-27 09:35:46,662 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=20, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+<pymysql.connections.Connection object at 0x7f905cc757b8>
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+load initial weights MAML from: /home/coder/projects/Med-VQA/data/pretrained_maml.weights
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+Loading embedding tfidf and weights from file
+Load embedding tfidf and weights from file successfully
+2023-10-27 09:35:50,461 INFO     -------[Epoch]:0-------
+2023-10-27 09:35:50,461 INFO     [Train] Loss:1.589086 , Train_Acc:30.646215%
+2023-10-27 09:35:51,199 INFO     [Validate] Val_Acc:32.150776%  |  Open_ACC:2.777778%   |  Close_ACC:51.660519%
+2023-10-27 09:35:52,650 INFO     [Result] The best acc is 32.150776% at epoch 0
+451 180.0 271.0
+2023-10-27 09:35:56,412 INFO     -------[Epoch]:1-------
+2023-10-27 09:35:56,412 INFO     [Train] Loss:0.045792 , Train_Acc:37.075718%
+2023-10-27 09:35:56,760 INFO     [Validate] Val_Acc:33.702881%  |  Open_ACC:6.111111%   |  Close_ACC:52.029522%
+2023-10-27 09:35:58,118 INFO     [Result] The best acc is 33.702881% at epoch 1
+451 180.0 271.0
+2023-10-27 09:36:02,605 INFO     -------[Epoch]:2-------
+2023-10-27 09:36:02,605 INFO     [Train] Loss:0.040727 , Train_Acc:42.167103%
+2023-10-27 09:36:02,916 INFO     [Validate] Val_Acc:37.472282%  |  Open_ACC:7.222222%   |  Close_ACC:57.564575%
+2023-10-27 09:36:04,300 INFO     [Result] The best acc is 37.472282% at epoch 2
+451 180.0 271.0
+2023-10-27 09:36:09,153 INFO     -------[Epoch]:3-------
+2023-10-27 09:36:09,154 INFO     [Train] Loss:0.036481 , Train_Acc:47.095303%
+2023-10-27 09:36:09,459 INFO     [Validate] Val_Acc:41.906872%  |  Open_ACC:11.666667%   |  Close_ACC:61.992622%
+2023-10-27 09:36:11,311 INFO     [Result] The best acc is 41.906872% at epoch 3
+451 180.0 271.0
+2023-10-27 09:36:16,752 INFO     -------[Epoch]:4-------
+2023-10-27 09:36:16,752 INFO     [Train] Loss:0.032125 , Train_Acc:50.456921%
+2023-10-27 09:36:17,091 INFO     [Validate] Val_Acc:43.237251%  |  Open_ACC:11.666667%   |  Close_ACC:64.206642%
+2023-10-27 09:36:17,450 INFO     [Result] The best acc is 43.237251% at epoch 4
+451 180.0 271.0
+2023-10-27 09:36:23,134 INFO     -------[Epoch]:5-------
+2023-10-27 09:36:23,134 INFO     [Train] Loss:0.028010 , Train_Acc:55.776764%
+2023-10-27 09:36:23,446 INFO     [Validate] Val_Acc:46.119732%  |  Open_ACC:11.111112%   |  Close_ACC:69.372696%
+2023-10-27 09:36:23,801 INFO     [Result] The best acc is 46.119732% at epoch 5
+451 180.0 271.0
+2023-10-27 09:36:29,645 INFO     -------[Epoch]:6-------
+2023-10-27 09:36:29,646 INFO     [Train] Loss:0.025337 , Train_Acc:59.725849%
+2023-10-27 09:36:29,960 INFO     [Validate] Val_Acc:45.232815%  |  Open_ACC:11.111112%   |  Close_ACC:67.896683%
+2023-10-27 09:36:29,961 INFO     [Result] The best acc is 46.119732% at epoch 5
+451 180.0 271.0
+2023-10-27 09:36:35,695 INFO     -------[Epoch]:7-------
+2023-10-27 09:36:35,695 INFO     [Train] Loss:0.023027 , Train_Acc:63.120106%
+2023-10-27 09:36:35,996 INFO     [Validate] Val_Acc:47.006653%  |  Open_ACC:16.666668%   |  Close_ACC:67.158676%
+2023-10-27 09:36:36,370 INFO     [Result] The best acc is 47.006653% at epoch 7
+451 180.0 271.0
+2023-10-27 09:36:41,978 INFO     -------[Epoch]:8-------
+2023-10-27 09:36:41,978 INFO     [Train] Loss:0.020555 , Train_Acc:66.612274%
+2023-10-27 09:36:42,336 INFO     [Validate] Val_Acc:48.780487%  |  Open_ACC:16.111111%   |  Close_ACC:70.479706%
+2023-10-27 09:36:42,712 INFO     [Result] The best acc is 48.780487% at epoch 8
+451 180.0 271.0
+2023-10-27 09:36:48,346 INFO     -------[Epoch]:9-------
+2023-10-27 09:36:48,347 INFO     [Train] Loss:0.016835 , Train_Acc:71.801567%
+2023-10-27 09:36:48,666 INFO     [Validate] Val_Acc:50.554325%  |  Open_ACC:20.555555%   |  Close_ACC:70.479706%
+2023-10-27 09:36:49,094 INFO     [Result] The best acc is 50.554325% at epoch 9
+451 180.0 271.0
+2023-10-27 09:36:54,578 INFO     -------[Epoch]:10-------
+2023-10-27 09:36:54,579 INFO     [Train] Loss:0.015478 , Train_Acc:74.934731%
+2023-10-27 09:36:54,917 INFO     [Validate] Val_Acc:49.223946%  |  Open_ACC:20.555555%   |  Close_ACC:68.265686%
+2023-10-27 09:36:54,917 INFO     [Result] The best acc is 50.554325% at epoch 9
+451 180.0 271.0
+2023-10-27 09:36:58,969 INFO     -------[Epoch]:11-------
+2023-10-27 09:36:58,970 INFO     [Train] Loss:0.014021 , Train_Acc:76.762405%
+2023-10-27 09:36:59,675 INFO     [Validate] Val_Acc:56.097561%  |  Open_ACC:24.444445%   |  Close_ACC:77.121773%
+2023-10-27 09:37:00,049 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:37:04,034 INFO     -------[Epoch]:12-------
+2023-10-27 09:37:04,035 INFO     [Train] Loss:0.011801 , Train_Acc:80.972588%
+2023-10-27 09:37:04,551 INFO     [Validate] Val_Acc:54.767185%  |  Open_ACC:27.777779%   |  Close_ACC:72.693726%
+2023-10-27 09:37:04,551 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:37:10,052 INFO     -------[Epoch]:13-------
+2023-10-27 09:37:10,052 INFO     [Train] Loss:0.011003 , Train_Acc:82.604439%
+2023-10-27 09:37:10,370 INFO     [Validate] Val_Acc:55.875832%  |  Open_ACC:31.111113%   |  Close_ACC:72.324722%
+2023-10-27 09:37:10,370 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:37:16,028 INFO     -------[Epoch]:14-------
+2023-10-27 09:37:16,028 INFO     [Train] Loss:0.009743 , Train_Acc:85.476501%
+2023-10-27 09:37:16,354 INFO     [Validate] Val_Acc:57.649666%  |  Open_ACC:35.000000%   |  Close_ACC:72.693726%
+2023-10-27 09:37:16,716 INFO     [Result] The best acc is 57.649666% at epoch 14
+451 180.0 271.0
+2023-10-27 09:37:22,611 INFO     -------[Epoch]:15-------
+2023-10-27 09:37:22,612 INFO     [Train] Loss:0.008470 , Train_Acc:87.532639%
+2023-10-27 09:37:22,953 INFO     [Validate] Val_Acc:57.206207%  |  Open_ACC:32.777779%   |  Close_ACC:73.431732%
+2023-10-27 09:37:22,953 INFO     [Result] The best acc is 57.649666% at epoch 14
+451 180.0 271.0
+2023-10-27 09:37:27,844 INFO     -------[Epoch]:16-------
+2023-10-27 09:37:27,844 INFO     [Train] Loss:0.006298 , Train_Acc:89.490860%
+2023-10-27 09:37:28,461 INFO     [Validate] Val_Acc:58.758316%  |  Open_ACC:36.111111%   |  Close_ACC:73.800735%
+2023-10-27 09:37:28,879 INFO     [Result] The best acc is 58.758316% at epoch 16
+451 180.0 271.0
+2023-10-27 09:37:32,180 INFO     -------[Epoch]:17-------
+2023-10-27 09:37:32,181 INFO     [Train] Loss:0.006156 , Train_Acc:90.339424%
+2023-10-27 09:37:32,490 INFO     [Validate] Val_Acc:58.093124%  |  Open_ACC:35.000000%   |  Close_ACC:73.431732%
+2023-10-27 09:37:32,490 INFO     [Result] The best acc is 58.758316% at epoch 16
+451 180.0 271.0
+2023-10-27 09:37:38,296 INFO     -------[Epoch]:18-------
+2023-10-27 09:37:38,296 INFO     [Train] Loss:0.006437 , Train_Acc:91.220627%
+2023-10-27 09:37:38,636 INFO     [Validate] Val_Acc:60.753880%  |  Open_ACC:41.111111%   |  Close_ACC:73.800735%
+2023-10-27 09:37:39,002 INFO     [Result] The best acc is 60.753880% at epoch 18
+451 180.0 271.0
+2023-10-27 09:37:44,738 INFO     -------[Epoch]:19-------
+2023-10-27 09:37:44,739 INFO     [Train] Loss:0.004521 , Train_Acc:93.603134%
+2023-10-27 09:37:45,112 INFO     [Validate] Val_Acc:61.862526%  |  Open_ACC:43.888889%   |  Close_ACC:73.800735%
+2023-10-27 09:37:45,508 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:37:45,827 INFO     [Evaluate] Val_Acc:62.084255%  |  Open_ACC:44.134075%   |  Close_ACC:73.897057%
+2023-10-27 09:37:45,831 INFO     >>>The net is:
+2023-10-27 09:37:45,831 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:37:45,832 INFO     >>>The args is:
+2023-10-27 09:37:45,833 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=20, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+451 179.0 272.0
+2023-10-27 09:37:46,289 INFO     [Evaluate] Val_Acc:62.084255%  |  Open_ACC:44.134075%   |  Close_ACC:73.897057%
+451 179.0 272.0
+/home/coder/miniconda/envs/CR/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'language_model.WordEmbedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+2023-10-27 09:41:11,725 INFO     >>>The net is:
+2023-10-27 09:41:11,725 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:41:11,726 INFO     >>>The args is:
+2023-10-27 09:41:11,727 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=25, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+<pymysql.connections.Connection object at 0x7f61f08317f0>
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+/home/coder/projects/Med-VQA/data/cache/trainval_ans2label.pkl
+loading MAML image data from file: /home/coder/projects/Med-VQA/data/images84x84.pkl
+load initial weights MAML from: /home/coder/projects/Med-VQA/data/pretrained_maml.weights
+loading dictionary from /home/coder/projects/Med-VQA/data/dictionary.pkl
+Loading embedding tfidf and weights from file
+Load embedding tfidf and weights from file successfully
+2023-10-27 09:41:17,183 INFO     -------[Epoch]:0-------
+2023-10-27 09:41:17,184 INFO     [Train] Loss:1.589086 , Train_Acc:30.646215%
+2023-10-27 09:41:17,667 INFO     [Validate] Val_Acc:32.150776%  |  Open_ACC:2.777778%   |  Close_ACC:51.660519%
+2023-10-27 09:41:19,100 INFO     [Result] The best acc is 32.150776% at epoch 0
+451 180.0 271.0
+2023-10-27 09:41:23,872 INFO     -------[Epoch]:1-------
+2023-10-27 09:41:23,872 INFO     [Train] Loss:0.045792 , Train_Acc:37.075718%
+2023-10-27 09:41:24,392 INFO     [Validate] Val_Acc:33.702881%  |  Open_ACC:6.111111%   |  Close_ACC:52.029522%
+2023-10-27 09:41:25,872 INFO     [Result] The best acc is 33.702881% at epoch 1
+451 180.0 271.0
+2023-10-27 09:41:30,858 INFO     -------[Epoch]:2-------
+2023-10-27 09:41:30,858 INFO     [Train] Loss:0.040727 , Train_Acc:42.167103%
+2023-10-27 09:41:31,491 INFO     [Validate] Val_Acc:37.472282%  |  Open_ACC:7.222222%   |  Close_ACC:57.564575%
+2023-10-27 09:41:33,446 INFO     [Result] The best acc is 37.472282% at epoch 2
+451 180.0 271.0
+2023-10-27 09:41:37,144 INFO     -------[Epoch]:3-------
+2023-10-27 09:41:37,145 INFO     [Train] Loss:0.036481 , Train_Acc:47.095303%
+2023-10-27 09:41:37,728 INFO     [Validate] Val_Acc:41.906872%  |  Open_ACC:11.666667%   |  Close_ACC:61.992622%
+2023-10-27 09:41:39,183 INFO     [Result] The best acc is 41.906872% at epoch 3
+451 180.0 271.0
+2023-10-27 09:41:42,657 INFO     -------[Epoch]:4-------
+2023-10-27 09:41:42,657 INFO     [Train] Loss:0.032125 , Train_Acc:50.456921%
+2023-10-27 09:41:43,037 INFO     [Validate] Val_Acc:43.237251%  |  Open_ACC:11.666667%   |  Close_ACC:64.206642%
+2023-10-27 09:41:44,469 INFO     [Result] The best acc is 43.237251% at epoch 4
+451 180.0 271.0
+2023-10-27 09:41:49,008 INFO     -------[Epoch]:5-------
+2023-10-27 09:41:49,008 INFO     [Train] Loss:0.028010 , Train_Acc:55.776764%
+2023-10-27 09:41:49,368 INFO     [Validate] Val_Acc:46.119732%  |  Open_ACC:11.111112%   |  Close_ACC:69.372696%
+2023-10-27 09:41:51,479 INFO     [Result] The best acc is 46.119732% at epoch 5
+451 180.0 271.0
+2023-10-27 09:41:55,971 INFO     -------[Epoch]:6-------
+2023-10-27 09:41:55,971 INFO     [Train] Loss:0.025337 , Train_Acc:59.725849%
+2023-10-27 09:41:56,288 INFO     [Validate] Val_Acc:45.232815%  |  Open_ACC:11.111112%   |  Close_ACC:67.896683%
+2023-10-27 09:41:56,288 INFO     [Result] The best acc is 46.119732% at epoch 5
+451 180.0 271.0
+2023-10-27 09:42:02,044 INFO     -------[Epoch]:7-------
+2023-10-27 09:42:02,044 INFO     [Train] Loss:0.023027 , Train_Acc:63.120106%
+2023-10-27 09:42:02,380 INFO     [Validate] Val_Acc:47.006653%  |  Open_ACC:16.666668%   |  Close_ACC:67.158676%
+2023-10-27 09:42:03,818 INFO     [Result] The best acc is 47.006653% at epoch 7
+451 180.0 271.0
+2023-10-27 09:42:09,539 INFO     -------[Epoch]:8-------
+2023-10-27 09:42:09,539 INFO     [Train] Loss:0.020555 , Train_Acc:66.612274%
+2023-10-27 09:42:09,891 INFO     [Validate] Val_Acc:48.780487%  |  Open_ACC:16.111111%   |  Close_ACC:70.479706%
+2023-10-27 09:42:12,067 INFO     [Result] The best acc is 48.780487% at epoch 8
+451 180.0 271.0
+2023-10-27 09:42:16,373 INFO     -------[Epoch]:9-------
+2023-10-27 09:42:16,374 INFO     [Train] Loss:0.016835 , Train_Acc:71.801567%
+2023-10-27 09:42:16,734 INFO     [Validate] Val_Acc:50.554325%  |  Open_ACC:20.555555%   |  Close_ACC:70.479706%
+2023-10-27 09:42:18,237 INFO     [Result] The best acc is 50.554325% at epoch 9
+451 180.0 271.0
+2023-10-27 09:42:23,911 INFO     -------[Epoch]:10-------
+2023-10-27 09:42:23,913 INFO     [Train] Loss:0.015478 , Train_Acc:74.934731%
+2023-10-27 09:42:24,426 INFO     [Validate] Val_Acc:49.223946%  |  Open_ACC:20.555555%   |  Close_ACC:68.265686%
+2023-10-27 09:42:24,426 INFO     [Result] The best acc is 50.554325% at epoch 9
+451 180.0 271.0
+2023-10-27 09:42:29,658 INFO     -------[Epoch]:11-------
+2023-10-27 09:42:29,658 INFO     [Train] Loss:0.014021 , Train_Acc:76.762405%
+2023-10-27 09:42:30,156 INFO     [Validate] Val_Acc:56.097561%  |  Open_ACC:24.444445%   |  Close_ACC:77.121773%
+2023-10-27 09:42:31,614 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:42:36,751 INFO     -------[Epoch]:12-------
+2023-10-27 09:42:36,752 INFO     [Train] Loss:0.011801 , Train_Acc:80.972588%
+2023-10-27 09:42:37,167 INFO     [Validate] Val_Acc:54.767185%  |  Open_ACC:27.777779%   |  Close_ACC:72.693726%
+2023-10-27 09:42:37,169 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:42:41,900 INFO     -------[Epoch]:13-------
+2023-10-27 09:42:41,901 INFO     [Train] Loss:0.011003 , Train_Acc:82.604439%
+2023-10-27 09:42:42,294 INFO     [Validate] Val_Acc:55.875832%  |  Open_ACC:31.111113%   |  Close_ACC:72.324722%
+2023-10-27 09:42:42,295 INFO     [Result] The best acc is 56.097561% at epoch 11
+451 180.0 271.0
+2023-10-27 09:42:48,043 INFO     -------[Epoch]:14-------
+2023-10-27 09:42:48,043 INFO     [Train] Loss:0.009743 , Train_Acc:85.476501%
+2023-10-27 09:42:48,409 INFO     [Validate] Val_Acc:57.649666%  |  Open_ACC:35.000000%   |  Close_ACC:72.693726%
+2023-10-27 09:42:49,898 INFO     [Result] The best acc is 57.649666% at epoch 14
+451 180.0 271.0
+2023-10-27 09:42:54,420 INFO     -------[Epoch]:15-------
+2023-10-27 09:42:54,420 INFO     [Train] Loss:0.008470 , Train_Acc:87.532639%
+2023-10-27 09:42:55,095 INFO     [Validate] Val_Acc:57.206207%  |  Open_ACC:32.777779%   |  Close_ACC:73.431732%
+2023-10-27 09:42:55,096 INFO     [Result] The best acc is 57.649666% at epoch 14
+451 180.0 271.0
+2023-10-27 09:43:00,045 INFO     -------[Epoch]:16-------
+2023-10-27 09:43:00,046 INFO     [Train] Loss:0.006298 , Train_Acc:89.490860%
+2023-10-27 09:43:00,650 INFO     [Validate] Val_Acc:58.758316%  |  Open_ACC:36.111111%   |  Close_ACC:73.800735%
+2023-10-27 09:43:02,441 INFO     [Result] The best acc is 58.758316% at epoch 16
+451 180.0 271.0
+2023-10-27 09:43:06,940 INFO     -------[Epoch]:17-------
+2023-10-27 09:43:06,940 INFO     [Train] Loss:0.006156 , Train_Acc:90.339424%
+2023-10-27 09:43:07,324 INFO     [Validate] Val_Acc:58.093124%  |  Open_ACC:35.000000%   |  Close_ACC:73.431732%
+2023-10-27 09:43:07,325 INFO     [Result] The best acc is 58.758316% at epoch 16
+451 180.0 271.0
+2023-10-27 09:43:12,770 INFO     -------[Epoch]:18-------
+2023-10-27 09:43:12,771 INFO     [Train] Loss:0.006437 , Train_Acc:91.220627%
+2023-10-27 09:43:13,137 INFO     [Validate] Val_Acc:60.753880%  |  Open_ACC:41.111111%   |  Close_ACC:73.800735%
+2023-10-27 09:43:14,626 INFO     [Result] The best acc is 60.753880% at epoch 18
+451 180.0 271.0
+2023-10-27 09:43:19,727 INFO     -------[Epoch]:19-------
+2023-10-27 09:43:19,727 INFO     [Train] Loss:0.004521 , Train_Acc:93.603134%
+2023-10-27 09:43:20,091 INFO     [Validate] Val_Acc:61.862526%  |  Open_ACC:43.888889%   |  Close_ACC:73.800735%
+2023-10-27 09:43:21,858 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:26,895 INFO     -------[Epoch]:20-------
+2023-10-27 09:43:26,895 INFO     [Train] Loss:0.004369 , Train_Acc:93.472588%
+2023-10-27 09:43:27,287 INFO     [Validate] Val_Acc:58.980045%  |  Open_ACC:41.111111%   |  Close_ACC:70.848709%
+2023-10-27 09:43:27,287 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:33,207 INFO     -------[Epoch]:21-------
+2023-10-27 09:43:33,208 INFO     [Train] Loss:0.003767 , Train_Acc:95.398170%
+2023-10-27 09:43:33,545 INFO     [Validate] Val_Acc:58.980045%  |  Open_ACC:38.888889%   |  Close_ACC:72.324722%
+2023-10-27 09:43:33,545 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:39,063 INFO     -------[Epoch]:22-------
+2023-10-27 09:43:39,063 INFO     [Train] Loss:0.004228 , Train_Acc:95.039169%
+2023-10-27 09:43:39,517 INFO     [Validate] Val_Acc:60.088692%  |  Open_ACC:40.000000%   |  Close_ACC:73.431732%
+2023-10-27 09:43:39,520 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:44,320 INFO     -------[Epoch]:23-------
+2023-10-27 09:43:44,321 INFO     [Train] Loss:0.005401 , Train_Acc:93.896866%
+2023-10-27 09:43:44,936 INFO     [Validate] Val_Acc:57.871395%  |  Open_ACC:42.222221%   |  Close_ACC:68.265686%
+2023-10-27 09:43:44,938 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:50,299 INFO     -------[Epoch]:24-------
+2023-10-27 09:43:50,299 INFO     [Train] Loss:0.003909 , Train_Acc:95.724548%
+2023-10-27 09:43:50,849 INFO     [Validate] Val_Acc:61.862526%  |  Open_ACC:42.777779%   |  Close_ACC:74.538750%
+2023-10-27 09:43:50,849 INFO     [Result] The best acc is 61.862526% at epoch 19
+451 180.0 271.0
+2023-10-27 09:43:51,383 INFO     [Evaluate] Val_Acc:61.862526%  |  Open_ACC:43.016758%   |  Close_ACC:74.264709%
+2023-10-27 09:43:51,385 INFO     >>>The net is:
+2023-10-27 09:43:51,385 INFO     BAN_Model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(1178, 300, padding_idx=1177)
+    (emb_): Embedding(1178, 300, padding_idx=1177)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(600, 1024, batch_first=True)
+  )
+  (close_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (close_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (close_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=56, bias=True)
+    )
+  )
+  (open_att): BiAttention(
+    (logits): BCNet(
+      (v_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=64, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (q_net): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=3072, bias=True)
+          (2): ReLU()
+        )
+      )
+      (dropout): Dropout(p=0.5)
+      (p_net): AvgPool1d(kernel_size=(3,), stride=(3,), padding=(0,))
+    )
+  )
+  (open_resnet): BiResNet(
+    (b_net): ModuleList(
+      (0): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+      (1): BCNet(
+        (v_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=64, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (q_net): FCNet(
+          (main): Sequential(
+            (0): Dropout(p=0.2)
+            (1): Linear(in_features=1024, out_features=1024, bias=True)
+            (2): ReLU()
+          )
+        )
+        (dropout): Dropout(p=0.5)
+      )
+    )
+    (q_prj): ModuleList(
+      (0): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+      (1): FCNet(
+        (main): Sequential(
+          (0): Dropout(p=0.2)
+          (1): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+      )
+    )
+    (c_prj): ModuleList()
+  )
+  (open_classifier): SimpleClassifier(
+    (main): Sequential(
+      (0): Linear(in_features=1024, out_features=2048, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.5, inplace)
+      (3): Linear(in_features=2048, out_features=431, bias=True)
+    )
+  )
+  (typeatt): typeAttention(
+    (w_emb): WordEmbedding(
+      (emb): Embedding(1178, 300, padding_idx=1177)
+      (dropout): Dropout(p=0.0)
+    )
+    (q_emb): QuestionEmbedding(
+      (rnn): GRU(300, 1024, batch_first=True)
+    )
+    (q_final): QuestionAttention(
+      (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+      (attn): Linear(in_features=1024, out_features=1, bias=True)
+    )
+    (f_fc1): Linear(in_features=1024, out_features=2048, bias=True)
+    (f_fc2): Linear(in_features=2048, out_features=1024, bias=True)
+    (f_fc3): Linear(in_features=1024, out_features=1024, bias=True)
+  )
+  (maml): SimpleCNN(
+    (conv1): Conv2d(1, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv1_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+    (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (conv4_bn): BatchNorm2d(64, eps=1e-05, momentum=0.05, affine=True, track_running_stats=True)
+  )
+)
+2023-10-27 09:43:51,388 INFO     >>>The args is:
+2023-10-27 09:43:51,388 INFO     Namespace(activation='relu', ae_alpha=0.001, ae_model_path='pretrained_ae.pth', attention='BAN', autoencoder=False, batch_size=64, cat=True, clip_norm=0.25, data_dir='/home/coder/projects/Med-VQA/data', details='original ', device=device(type='cuda', index=0), dropout=0.5, epochs=25, eps_cnn=1e-05, glimpse=2, gpu=0, hid_dim=1024, input=None, lr=0.005, maml=True, maml_model_path='pretrained_maml.weights', momentum_cnn=0.05, num_stacks=2, other_model=False, output='saved_models', print_interval=20, question_len=12, record_id=1, rnn='GRU', seed=88, tfidf=True, update_freq='1', use_counter=False, use_data=True, v_dim=64)
+451 179.0 272.0
+2023-10-27 09:43:51,873 INFO     [Evaluate] Val_Acc:61.862526%  |  Open_ACC:43.016758%   |  Close_ACC:74.264709%
+451 179.0 272.0

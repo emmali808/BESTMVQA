@@ -1,0 +1,2 @@
+img_path,content,pre_ans,similar_img_path,similar_txt_content
+/home/coder/projects/SystemDataset/robot/upload.jpg,Which lung is clearer?,"I'm sorry, but I need an image to respond to your question. Can you provide an image?",/home/coder/projects/SystemDataset/robot/report_retrieval/image/synpic19782.jpg,"The image shows an X - ray of a person's chest. The lungs, heart and ribs can be seen in the image. The bones are white and the lungs are black. The heart is in the center of the chest and is visible as a dark spot."

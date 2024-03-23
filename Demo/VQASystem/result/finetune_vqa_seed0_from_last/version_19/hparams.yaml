@@ -1,0 +1,66 @@
+config:
+  batch_size: 2
+  data_root: /home/coder/projects/METER/data/vqa_robot_demo
+  datasets:
+  - vqa
+  decay_power: 1
+  draw_false_image: 0
+  draw_false_text: 0
+  drop_rate: 0.1
+  end_lr: 0
+  exp_name: finetune_vqa
+  fast_dev_run: false
+  get_recall_metric: false
+  hidden_size: 768
+  image_only: false
+  image_size: 144
+  input_image_embed_size: 768
+  input_text_embed_size: 768
+  learning_rate: 5.0e-06
+  load_path: /home/coder/projects/METER/result/finetune_vqa_seed0_from_meter_clip16_288_roberta_pretrain/version_45/checkpoints/last.ckpt
+  log_dir: result
+  loss_names:
+    contras: 0
+    irtr: 0
+    itm: 0
+    mlm: 0
+    mpp: 0
+    nlvr2: 0
+    snli: 0
+    vcr: 0
+    vcr_qar: 0
+    vqa: 1
+  lr_mult_cross_modal: 5
+  lr_mult_head: 50
+  max_epoch: 1
+  max_steps: null
+  max_text_len: 50
+  mlm_prob: 0.15
+  mlp_ratio: 4
+  num_gpus: 1
+  num_heads: 12
+  num_layers: 6
+  num_nodes: 1
+  num_top_layer: 6
+  num_workers: 8
+  optim_type: adamw
+  patch_size: 16
+  per_gpu_batchsize: 2
+  precision: 32
+  record_id: 1
+  resolution_before: 224
+  resume_from: null
+  seed: 0
+  test_only: true
+  tokenizer: roberta-base
+  train_transform_keys:
+  - clip_randaug
+  val_check_interval: 1
+  val_transform_keys:
+  - clip
+  vit: ViT-B/16
+  vocab_size: 10000
+  vqav2_label_size: 4040
+  warmup_steps: 0.1
+  weight_decay: 0.01
+  whole_word_masking: false

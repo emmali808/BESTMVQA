@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#python3 test.py --use_VQA --VQA_dir data/converted_data --maml --autoencoder --img_size 84 --maml_model_path pretrained_maml_pytorch_other_optimization_5shot_newmethod.pth --input saved_models/MMQ_SAN_MEVF_pathVQA --maml_nums 0,2,5 --model SAN --feat_dim 32 --epoch _best
+#python3 test.py --use_VQA --VQA_dir data/converted_data --maml --autoencoder --img_size 84 --maml_model_path pretrained_maml_pytorch_other_optimization_5shot_newmethod.pth --input saved_models/MMQ_BAN_MEVF_pathVQA --maml_nums 0,2,5 --model BAN --feat_dim 32 --epoch _best
+#
+#python3 test.py --use_VQA --VQA_dir data_RAD --maml --autoencoder --img_size 84 --maml_model_path pretrained_maml_pytorch_other_optimization_3shot_newmethod.pth --input saved_models/MMQ_SAN_MEVF_vqaRAD --epoch _best --maml_nums 0,2,4 --model SAN --feat_dim 64
+python3 test.py --use_VQA --VQA_dir data_RAD --maml --autoencoder --img_size 84 --maml_model_path pretrained_maml_pytorch_other_optimization_3shot_newmethod.pth --input saved_models/MMQ_BAN_MEVF_vqaRAD --epoch _best --maml_nums 0,2,4 --model BAN --feat_dim 64

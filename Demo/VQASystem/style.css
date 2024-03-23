@@ -1,0 +1,67 @@
+[data-testid=metric-container] {
+    box-shadow: 0 0 3px #cccccc;
+    padding: 10px;
+}
+
+.plot-container>div {
+    box-shadow: 0 0 3px #cccccc;
+}
+
+section[data-testid='stSidebar'] {
+    background-color: #90d7ec;
+    min-width:unset !important;
+    width: unset !important;
+    flex-shrink: unset !important;
+    
+}
+
+button[kind="header"] {
+    background-color: transparent;
+    color:rgb(180, 167, 141)
+}
+
+@media(hover){
+    /* header element to be removed */
+    header[data-testid="stHeader"] {
+        display:none;
+    }
+
+    /* The navigation menu specs and size */
+    section[data-testid='stSidebar'] > div {
+        height: 100%;
+        width: 95px;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #90d7ec;
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+
+    /* The navigation menu open and close on hover and size */
+    /* section[data-testid='stSidebar'] > div {
+    height: 100%;
+    width: 75px; /* Put some width to hover on. */
+    /* } 
+
+    /* ON HOVER */
+    section[data-testid='stSidebar'] > div:hover{
+    width: 300px;
+    }
+
+    /* The button on the streamlit navigation menu - hidden */
+    button[kind="header"] {
+        display: none;
+    }
+}
+     
+@media(max-width: 272px){
+    
+    section[data-testid='stSidebar'] > div {
+        width:15rem;
+    }
+}
+ 

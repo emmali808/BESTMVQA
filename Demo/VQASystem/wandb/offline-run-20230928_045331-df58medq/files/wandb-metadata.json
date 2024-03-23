@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.15.0-52-generic-x86_64-with-glibc2.17",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-09-28T04:53:32.166799",
+    "startedAt": "2023-09-28T04:53:31.974031",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "with",
+        "seed=0",
+        "data_root=/home/coder/projects/PTUnifier-share/data/vqa_robot_demo",
+        "num_gpus=1",
+        "per_gpu_batchsize=16",
+        "num_nodes=1",
+        "record_id=1",
+        "test_only=True",
+        "task_finetune_vqa_vqa_rad",
+        "clip16",
+        "text_roberta",
+        "image_size=384",
+        "tokenizer=/home/coder/projects/PTUnifier-share/downloaded/biomed_roberta_base",
+        "pseudo_vision_token_pool_size=2048",
+        "pseudo_langauge_token_pool_size=2048",
+        "load_path=/home/coder/projects/PTUnifier-share/downloaded/ptu_finetune.ckpt"
+    ],
+    "state": "running",
+    "program": "/home/coder/projects/PTUnifier-share/main.py",
+    "git": {
+        "remote": "https://github.com/prophesierimposing/VQASystem.git",
+        "commit": "51f94bb4acab0cd1b15131a57440ae3b33d53805"
+    },
+    "email": null,
+    "root": "/home/coder/projects/Demo/VQASystem",
+    "host": "hxj",
+    "username": "coder",
+    "executable": "/home/coder/miniconda/envs/ptu/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2174.96825,
+        "min": 1200.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2826.615,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1673.258,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3000.0,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "total": 1832.6994018554688,
+        "used": 1692.007095336914
+    },
+    "gpu": "Quadro GV100",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "Quadro GV100",
+            "memory_total": 34359738368
+        },
+        {
+            "name": "Quadro GV100",
+            "memory_total": 34359738368
+        }
+    ],
+    "memory": {
+        "total": 62.51121139526367
+    }
+}

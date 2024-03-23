@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+opencv-python
+fastText
+tensorboardX
+pillow
+torch==1.8.0

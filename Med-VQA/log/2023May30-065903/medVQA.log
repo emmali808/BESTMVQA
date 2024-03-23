@@ -1,0 +1,20 @@
+Tue, 30 May 2023 06:59:03 INFO >>>The net is:
+Tue, 30 May 2023 06:59:03 INFO classify_model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(294, 300, padding_idx=293)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(300, 1024, batch_first=True)
+  )
+  (q_final): QuestionAttention(
+    (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+    (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+    (attn): Linear(in_features=1024, out_features=1, bias=True)
+  )
+  (f_fc1): Linear(in_features=1024, out_features=256, bias=True)
+  (f_fc2): Linear(in_features=256, out_features=64, bias=True)
+  (f_fc3): Linear(in_features=64, out_features=2, bias=True)
+)
+Tue, 30 May 2023 06:59:03 INFO >>>The args is:
+Tue, 30 May 2023 06:59:03 INFO Namespace(ae_alpha=0.001, ae_model_path='pretrained_ae.pth', autoencoder=True, dataset='RAD', device=device(type='cuda', index=0), gpu=0, maml=True, maml_model_path='pretrained_maml.weights', output='type_saved_models', seed=5, v_dim=64)

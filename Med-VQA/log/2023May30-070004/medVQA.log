@@ -1,0 +1,820 @@
+Tue, 30 May 2023 07:00:04 INFO >>>The net is:
+Tue, 30 May 2023 07:00:04 INFO classify_model(
+  (w_emb): WordEmbedding(
+    (emb): Embedding(294, 300, padding_idx=293)
+    (dropout): Dropout(p=0.0)
+  )
+  (q_emb): QuestionEmbedding(
+    (rnn): GRU(300, 1024, batch_first=True)
+  )
+  (q_final): QuestionAttention(
+    (tanh_gate): Linear(in_features=1324, out_features=1024, bias=True)
+    (sigmoid_gate): Linear(in_features=1324, out_features=1024, bias=True)
+    (attn): Linear(in_features=1024, out_features=1, bias=True)
+  )
+  (f_fc1): Linear(in_features=1024, out_features=256, bias=True)
+  (f_fc2): Linear(in_features=256, out_features=64, bias=True)
+  (f_fc3): Linear(in_features=64, out_features=2, bias=True)
+)
+Tue, 30 May 2023 07:00:04 INFO >>>The args is:
+Tue, 30 May 2023 07:00:04 INFO Namespace(ae_alpha=0.001, ae_model_path='pretrained_ae.pth', autoencoder=True, dataset='SLAKE', device=device(type='cuda', index=0), gpu=0, maml=True, maml_model_path='pretrained_maml.weights', output='type_saved_models', seed=5, v_dim=64)
+Tue, 30 May 2023 07:00:05 INFO -------[Epoch]:0-------
+Tue, 30 May 2023 07:00:05 INFO [Train] Loss:0.183965 , Train_Acc:91.795044%
+Tue, 30 May 2023 07:00:06 INFO [Validate] Val_Acc:99.905749%
+Tue, 30 May 2023 07:00:06 INFO [Result] The best acc is 99.905749% at epoch 0
+Tue, 30 May 2023 07:00:07 INFO -------[Epoch]:1-------
+Tue, 30 May 2023 07:00:07 INFO [Train] Loss:0.008106 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:08 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:08 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:09 INFO -------[Epoch]:2-------
+Tue, 30 May 2023 07:00:09 INFO [Train] Loss:0.003616 , Train_Acc:99.966510%
+Tue, 30 May 2023 07:00:10 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:10 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:11 INFO -------[Epoch]:3-------
+Tue, 30 May 2023 07:00:11 INFO [Train] Loss:0.004432 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:11 INFO [Validate] Val_Acc:99.905749%
+Tue, 30 May 2023 07:00:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:13 INFO -------[Epoch]:4-------
+Tue, 30 May 2023 07:00:13 INFO [Train] Loss:0.002940 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:13 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:13 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:15 INFO -------[Epoch]:5-------
+Tue, 30 May 2023 07:00:15 INFO [Train] Loss:0.002552 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:15 INFO [Validate] Val_Acc:99.905749%
+Tue, 30 May 2023 07:00:15 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:16 INFO -------[Epoch]:6-------
+Tue, 30 May 2023 07:00:16 INFO [Train] Loss:0.001377 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:17 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:17 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:18 INFO -------[Epoch]:7-------
+Tue, 30 May 2023 07:00:18 INFO [Train] Loss:0.002625 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:19 INFO [Validate] Val_Acc:99.717248%
+Tue, 30 May 2023 07:00:19 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:20 INFO -------[Epoch]:8-------
+Tue, 30 May 2023 07:00:20 INFO [Train] Loss:0.001920 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:22 INFO -------[Epoch]:9-------
+Tue, 30 May 2023 07:00:22 INFO [Train] Loss:0.002640 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:24 INFO -------[Epoch]:10-------
+Tue, 30 May 2023 07:00:24 INFO [Train] Loss:0.001907 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:24 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:24 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:26 INFO -------[Epoch]:11-------
+Tue, 30 May 2023 07:00:26 INFO [Train] Loss:0.001849 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:26 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:26 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:27 INFO -------[Epoch]:12-------
+Tue, 30 May 2023 07:00:27 INFO [Train] Loss:0.001689 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:28 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:28 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:29 INFO -------[Epoch]:13-------
+Tue, 30 May 2023 07:00:29 INFO [Train] Loss:0.001363 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:30 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:30 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:31 INFO -------[Epoch]:14-------
+Tue, 30 May 2023 07:00:31 INFO [Train] Loss:0.008515 , Train_Acc:99.799062%
+Tue, 30 May 2023 07:00:31 INFO [Validate] Val_Acc:99.528746%
+Tue, 30 May 2023 07:00:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:33 INFO -------[Epoch]:15-------
+Tue, 30 May 2023 07:00:33 INFO [Train] Loss:0.007761 , Train_Acc:99.849297%
+Tue, 30 May 2023 07:00:33 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:33 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:34 INFO -------[Epoch]:16-------
+Tue, 30 May 2023 07:00:34 INFO [Train] Loss:0.001951 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:35 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:35 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:36 INFO -------[Epoch]:17-------
+Tue, 30 May 2023 07:00:36 INFO [Train] Loss:0.000913 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:37 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:37 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:38 INFO -------[Epoch]:18-------
+Tue, 30 May 2023 07:00:38 INFO [Train] Loss:0.001570 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:39 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:39 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:40 INFO -------[Epoch]:19-------
+Tue, 30 May 2023 07:00:40 INFO [Train] Loss:0.001490 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:42 INFO -------[Epoch]:20-------
+Tue, 30 May 2023 07:00:42 INFO [Train] Loss:0.001286 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:42 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:42 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:44 INFO -------[Epoch]:21-------
+Tue, 30 May 2023 07:00:44 INFO [Train] Loss:0.001274 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:44 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:44 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:45 INFO -------[Epoch]:22-------
+Tue, 30 May 2023 07:00:45 INFO [Train] Loss:0.001460 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:46 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:46 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:47 INFO -------[Epoch]:23-------
+Tue, 30 May 2023 07:00:47 INFO [Train] Loss:0.001623 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:48 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:48 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:49 INFO -------[Epoch]:24-------
+Tue, 30 May 2023 07:00:49 INFO [Train] Loss:0.001622 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:51 INFO -------[Epoch]:25-------
+Tue, 30 May 2023 07:00:51 INFO [Train] Loss:0.001815 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:53 INFO -------[Epoch]:26-------
+Tue, 30 May 2023 07:00:53 INFO [Train] Loss:0.001564 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:53 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:53 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:54 INFO -------[Epoch]:27-------
+Tue, 30 May 2023 07:00:54 INFO [Train] Loss:0.001782 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:55 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:55 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:56 INFO -------[Epoch]:28-------
+Tue, 30 May 2023 07:00:56 INFO [Train] Loss:0.001033 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:57 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:57 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:00:58 INFO -------[Epoch]:29-------
+Tue, 30 May 2023 07:00:58 INFO [Train] Loss:0.001325 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:00:58 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:00:58 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:00 INFO -------[Epoch]:30-------
+Tue, 30 May 2023 07:01:00 INFO [Train] Loss:0.000961 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:02 INFO -------[Epoch]:31-------
+Tue, 30 May 2023 07:01:02 INFO [Train] Loss:0.001397 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:02 INFO [Validate] Val_Acc:99.811499%
+Tue, 30 May 2023 07:01:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:03 INFO -------[Epoch]:32-------
+Tue, 30 May 2023 07:01:03 INFO [Train] Loss:0.001770 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:04 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:04 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:05 INFO -------[Epoch]:33-------
+Tue, 30 May 2023 07:01:05 INFO [Train] Loss:0.001748 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:06 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:06 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:07 INFO -------[Epoch]:34-------
+Tue, 30 May 2023 07:01:07 INFO [Train] Loss:0.001728 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:07 INFO [Validate] Val_Acc:99.811499%
+Tue, 30 May 2023 07:01:07 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:09 INFO -------[Epoch]:35-------
+Tue, 30 May 2023 07:01:09 INFO [Train] Loss:0.001039 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:09 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:09 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:11 INFO -------[Epoch]:36-------
+Tue, 30 May 2023 07:01:11 INFO [Train] Loss:0.001018 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:11 INFO [Validate] Val_Acc:99.811499%
+Tue, 30 May 2023 07:01:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:13 INFO -------[Epoch]:37-------
+Tue, 30 May 2023 07:01:13 INFO [Train] Loss:0.001728 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:13 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:13 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:14 INFO -------[Epoch]:38-------
+Tue, 30 May 2023 07:01:14 INFO [Train] Loss:0.000936 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:15 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:15 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:16 INFO -------[Epoch]:39-------
+Tue, 30 May 2023 07:01:16 INFO [Train] Loss:0.001452 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:17 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:17 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:18 INFO -------[Epoch]:40-------
+Tue, 30 May 2023 07:01:18 INFO [Train] Loss:0.004274 , Train_Acc:99.916276%
+Tue, 30 May 2023 07:01:18 INFO [Validate] Val_Acc:87.370405%
+Tue, 30 May 2023 07:01:18 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:20 INFO -------[Epoch]:41-------
+Tue, 30 May 2023 07:01:20 INFO [Train] Loss:0.021800 , Train_Acc:99.715338%
+Tue, 30 May 2023 07:01:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:22 INFO -------[Epoch]:42-------
+Tue, 30 May 2023 07:01:22 INFO [Train] Loss:0.002345 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:23 INFO -------[Epoch]:43-------
+Tue, 30 May 2023 07:01:23 INFO [Train] Loss:0.002594 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:24 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:24 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:25 INFO -------[Epoch]:44-------
+Tue, 30 May 2023 07:01:25 INFO [Train] Loss:0.001439 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:26 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:26 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:27 INFO -------[Epoch]:45-------
+Tue, 30 May 2023 07:01:27 INFO [Train] Loss:0.001556 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:28 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:28 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:29 INFO -------[Epoch]:46-------
+Tue, 30 May 2023 07:01:29 INFO [Train] Loss:0.002319 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:29 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:29 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:31 INFO -------[Epoch]:47-------
+Tue, 30 May 2023 07:01:31 INFO [Train] Loss:0.002027 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:31 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:33 INFO -------[Epoch]:48-------
+Tue, 30 May 2023 07:01:33 INFO [Train] Loss:0.001274 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:33 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:33 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:34 INFO -------[Epoch]:49-------
+Tue, 30 May 2023 07:01:34 INFO [Train] Loss:0.001187 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:35 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:35 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:36 INFO -------[Epoch]:50-------
+Tue, 30 May 2023 07:01:36 INFO [Train] Loss:0.001819 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:37 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:37 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:38 INFO -------[Epoch]:51-------
+Tue, 30 May 2023 07:01:38 INFO [Train] Loss:0.001254 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:38 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:38 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:40 INFO -------[Epoch]:52-------
+Tue, 30 May 2023 07:01:40 INFO [Train] Loss:0.003679 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:42 INFO -------[Epoch]:53-------
+Tue, 30 May 2023 07:01:42 INFO [Train] Loss:0.002075 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:42 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:42 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:44 INFO -------[Epoch]:54-------
+Tue, 30 May 2023 07:01:44 INFO [Train] Loss:0.001586 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:44 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:44 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:45 INFO -------[Epoch]:55-------
+Tue, 30 May 2023 07:01:45 INFO [Train] Loss:0.002236 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:46 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:46 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:47 INFO -------[Epoch]:56-------
+Tue, 30 May 2023 07:01:47 INFO [Train] Loss:0.001972 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:48 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:48 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:49 INFO -------[Epoch]:57-------
+Tue, 30 May 2023 07:01:49 INFO [Train] Loss:0.001866 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:51 INFO -------[Epoch]:58-------
+Tue, 30 May 2023 07:01:51 INFO [Train] Loss:0.001686 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:53 INFO -------[Epoch]:59-------
+Tue, 30 May 2023 07:01:53 INFO [Train] Loss:0.001769 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:53 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:53 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:54 INFO -------[Epoch]:60-------
+Tue, 30 May 2023 07:01:54 INFO [Train] Loss:0.001507 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:55 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:55 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:56 INFO -------[Epoch]:61-------
+Tue, 30 May 2023 07:01:56 INFO [Train] Loss:0.001394 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:57 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:57 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:01:58 INFO -------[Epoch]:62-------
+Tue, 30 May 2023 07:01:58 INFO [Train] Loss:0.001204 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:01:58 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:01:58 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:00 INFO -------[Epoch]:63-------
+Tue, 30 May 2023 07:02:00 INFO [Train] Loss:0.001960 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:02 INFO -------[Epoch]:64-------
+Tue, 30 May 2023 07:02:02 INFO [Train] Loss:0.000925 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:02 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:03 INFO -------[Epoch]:65-------
+Tue, 30 May 2023 07:02:03 INFO [Train] Loss:0.001535 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:04 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:04 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:05 INFO -------[Epoch]:66-------
+Tue, 30 May 2023 07:02:05 INFO [Train] Loss:0.016168 , Train_Acc:99.815807%
+Tue, 30 May 2023 07:02:06 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:06 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:07 INFO -------[Epoch]:67-------
+Tue, 30 May 2023 07:02:07 INFO [Train] Loss:0.001329 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:07 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:07 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:09 INFO -------[Epoch]:68-------
+Tue, 30 May 2023 07:02:09 INFO [Train] Loss:0.001160 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:09 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:09 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:11 INFO -------[Epoch]:69-------
+Tue, 30 May 2023 07:02:11 INFO [Train] Loss:0.002721 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:11 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:13 INFO -------[Epoch]:70-------
+Tue, 30 May 2023 07:02:13 INFO [Train] Loss:0.001264 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:13 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:13 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:14 INFO -------[Epoch]:71-------
+Tue, 30 May 2023 07:02:14 INFO [Train] Loss:0.001257 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:15 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:15 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:16 INFO -------[Epoch]:72-------
+Tue, 30 May 2023 07:02:16 INFO [Train] Loss:0.001625 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:17 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:17 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:18 INFO -------[Epoch]:73-------
+Tue, 30 May 2023 07:02:18 INFO [Train] Loss:0.001589 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:18 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:18 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:20 INFO -------[Epoch]:74-------
+Tue, 30 May 2023 07:02:20 INFO [Train] Loss:0.002028 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:22 INFO -------[Epoch]:75-------
+Tue, 30 May 2023 07:02:22 INFO [Train] Loss:0.001381 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:24 INFO -------[Epoch]:76-------
+Tue, 30 May 2023 07:02:24 INFO [Train] Loss:0.001689 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:24 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:24 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:25 INFO -------[Epoch]:77-------
+Tue, 30 May 2023 07:02:25 INFO [Train] Loss:0.001440 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:26 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:26 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:27 INFO -------[Epoch]:78-------
+Tue, 30 May 2023 07:02:27 INFO [Train] Loss:0.001964 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:28 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:28 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:29 INFO -------[Epoch]:79-------
+Tue, 30 May 2023 07:02:29 INFO [Train] Loss:0.001489 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:29 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:29 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:31 INFO -------[Epoch]:80-------
+Tue, 30 May 2023 07:02:31 INFO [Train] Loss:0.001693 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:31 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:33 INFO -------[Epoch]:81-------
+Tue, 30 May 2023 07:02:33 INFO [Train] Loss:0.001598 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:33 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:33 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:34 INFO -------[Epoch]:82-------
+Tue, 30 May 2023 07:02:34 INFO [Train] Loss:0.001971 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:35 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:35 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:36 INFO -------[Epoch]:83-------
+Tue, 30 May 2023 07:02:36 INFO [Train] Loss:0.001889 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:37 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:37 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:38 INFO -------[Epoch]:84-------
+Tue, 30 May 2023 07:02:38 INFO [Train] Loss:0.001928 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:38 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:38 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:40 INFO -------[Epoch]:85-------
+Tue, 30 May 2023 07:02:40 INFO [Train] Loss:0.002269 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:42 INFO -------[Epoch]:86-------
+Tue, 30 May 2023 07:02:42 INFO [Train] Loss:0.002157 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:42 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:42 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:44 INFO -------[Epoch]:87-------
+Tue, 30 May 2023 07:02:44 INFO [Train] Loss:0.001646 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:44 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:44 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:45 INFO -------[Epoch]:88-------
+Tue, 30 May 2023 07:02:45 INFO [Train] Loss:0.001808 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:46 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:46 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:47 INFO -------[Epoch]:89-------
+Tue, 30 May 2023 07:02:47 INFO [Train] Loss:0.001914 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:48 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:48 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:49 INFO -------[Epoch]:90-------
+Tue, 30 May 2023 07:02:49 INFO [Train] Loss:0.001268 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:51 INFO -------[Epoch]:91-------
+Tue, 30 May 2023 07:02:51 INFO [Train] Loss:0.002181 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:53 INFO -------[Epoch]:92-------
+Tue, 30 May 2023 07:02:53 INFO [Train] Loss:0.002225 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:53 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:53 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:55 INFO -------[Epoch]:93-------
+Tue, 30 May 2023 07:02:55 INFO [Train] Loss:0.001982 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:55 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:55 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:56 INFO -------[Epoch]:94-------
+Tue, 30 May 2023 07:02:56 INFO [Train] Loss:0.001049 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:57 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:57 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:02:58 INFO -------[Epoch]:95-------
+Tue, 30 May 2023 07:02:58 INFO [Train] Loss:0.001860 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:02:59 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:02:59 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:00 INFO -------[Epoch]:96-------
+Tue, 30 May 2023 07:03:00 INFO [Train] Loss:0.001211 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:02 INFO -------[Epoch]:97-------
+Tue, 30 May 2023 07:03:02 INFO [Train] Loss:0.001203 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:02 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:04 INFO -------[Epoch]:98-------
+Tue, 30 May 2023 07:03:04 INFO [Train] Loss:0.000900 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:04 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:04 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:06 INFO -------[Epoch]:99-------
+Tue, 30 May 2023 07:03:06 INFO [Train] Loss:0.001342 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:06 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:06 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:07 INFO -------[Epoch]:100-------
+Tue, 30 May 2023 07:03:07 INFO [Train] Loss:0.001677 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:08 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:08 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:09 INFO -------[Epoch]:101-------
+Tue, 30 May 2023 07:03:09 INFO [Train] Loss:0.001690 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:10 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:10 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:11 INFO -------[Epoch]:102-------
+Tue, 30 May 2023 07:03:11 INFO [Train] Loss:0.001231 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:11 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:13 INFO -------[Epoch]:103-------
+Tue, 30 May 2023 07:03:13 INFO [Train] Loss:0.000747 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:13 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:13 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:15 INFO -------[Epoch]:104-------
+Tue, 30 May 2023 07:03:15 INFO [Train] Loss:0.001208 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:15 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:15 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:16 INFO -------[Epoch]:105-------
+Tue, 30 May 2023 07:03:16 INFO [Train] Loss:0.001156 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:17 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:17 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:18 INFO -------[Epoch]:106-------
+Tue, 30 May 2023 07:03:18 INFO [Train] Loss:0.002017 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:19 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:19 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:20 INFO -------[Epoch]:107-------
+Tue, 30 May 2023 07:03:20 INFO [Train] Loss:0.001281 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:22 INFO -------[Epoch]:108-------
+Tue, 30 May 2023 07:03:22 INFO [Train] Loss:0.006035 , Train_Acc:99.933021%
+Tue, 30 May 2023 07:03:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:24 INFO -------[Epoch]:109-------
+Tue, 30 May 2023 07:03:24 INFO [Train] Loss:0.001167 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:24 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:24 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:26 INFO -------[Epoch]:110-------
+Tue, 30 May 2023 07:03:26 INFO [Train] Loss:0.003158 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:26 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:26 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:27 INFO -------[Epoch]:111-------
+Tue, 30 May 2023 07:03:27 INFO [Train] Loss:0.001972 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:28 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:28 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:29 INFO -------[Epoch]:112-------
+Tue, 30 May 2023 07:03:29 INFO [Train] Loss:0.002448 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:30 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:30 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:31 INFO -------[Epoch]:113-------
+Tue, 30 May 2023 07:03:31 INFO [Train] Loss:0.001620 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:31 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:33 INFO -------[Epoch]:114-------
+Tue, 30 May 2023 07:03:33 INFO [Train] Loss:0.001821 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:33 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:33 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:35 INFO -------[Epoch]:115-------
+Tue, 30 May 2023 07:03:35 INFO [Train] Loss:0.002198 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:35 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:35 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:36 INFO -------[Epoch]:116-------
+Tue, 30 May 2023 07:03:36 INFO [Train] Loss:0.001401 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:37 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:37 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:38 INFO -------[Epoch]:117-------
+Tue, 30 May 2023 07:03:38 INFO [Train] Loss:0.001492 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:38 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:38 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:40 INFO -------[Epoch]:118-------
+Tue, 30 May 2023 07:03:40 INFO [Train] Loss:0.001966 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:42 INFO -------[Epoch]:119-------
+Tue, 30 May 2023 07:03:42 INFO [Train] Loss:0.001800 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:42 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:42 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:44 INFO -------[Epoch]:120-------
+Tue, 30 May 2023 07:03:44 INFO [Train] Loss:0.001564 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:44 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:44 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:45 INFO -------[Epoch]:121-------
+Tue, 30 May 2023 07:03:45 INFO [Train] Loss:0.001695 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:46 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:46 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:47 INFO -------[Epoch]:122-------
+Tue, 30 May 2023 07:03:47 INFO [Train] Loss:0.001383 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:48 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:48 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:49 INFO -------[Epoch]:123-------
+Tue, 30 May 2023 07:03:49 INFO [Train] Loss:0.001460 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:51 INFO -------[Epoch]:124-------
+Tue, 30 May 2023 07:03:51 INFO [Train] Loss:0.007627 , Train_Acc:99.949766%
+Tue, 30 May 2023 07:03:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:53 INFO -------[Epoch]:125-------
+Tue, 30 May 2023 07:03:53 INFO [Train] Loss:0.001665 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:53 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:53 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:55 INFO -------[Epoch]:126-------
+Tue, 30 May 2023 07:03:55 INFO [Train] Loss:0.001574 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:55 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:55 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:56 INFO -------[Epoch]:127-------
+Tue, 30 May 2023 07:03:56 INFO [Train] Loss:0.001594 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:57 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:57 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:03:58 INFO -------[Epoch]:128-------
+Tue, 30 May 2023 07:03:58 INFO [Train] Loss:0.001739 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:03:58 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:03:58 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:00 INFO -------[Epoch]:129-------
+Tue, 30 May 2023 07:04:00 INFO [Train] Loss:0.001881 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:02 INFO -------[Epoch]:130-------
+Tue, 30 May 2023 07:04:02 INFO [Train] Loss:0.001527 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:02 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:04 INFO -------[Epoch]:131-------
+Tue, 30 May 2023 07:04:04 INFO [Train] Loss:0.000879 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:04 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:04 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:05 INFO -------[Epoch]:132-------
+Tue, 30 May 2023 07:04:05 INFO [Train] Loss:0.001441 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:06 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:06 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:07 INFO -------[Epoch]:133-------
+Tue, 30 May 2023 07:04:07 INFO [Train] Loss:0.001182 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:08 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:08 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:09 INFO -------[Epoch]:134-------
+Tue, 30 May 2023 07:04:09 INFO [Train] Loss:0.001122 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:09 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:09 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:11 INFO -------[Epoch]:135-------
+Tue, 30 May 2023 07:04:11 INFO [Train] Loss:0.001514 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:11 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:13 INFO -------[Epoch]:136-------
+Tue, 30 May 2023 07:04:13 INFO [Train] Loss:0.001726 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:13 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:13 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:14 INFO -------[Epoch]:137-------
+Tue, 30 May 2023 07:04:14 INFO [Train] Loss:0.001434 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:15 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:15 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:16 INFO -------[Epoch]:138-------
+Tue, 30 May 2023 07:04:16 INFO [Train] Loss:0.001633 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:17 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:17 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:18 INFO -------[Epoch]:139-------
+Tue, 30 May 2023 07:04:18 INFO [Train] Loss:0.001740 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:18 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:18 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:20 INFO -------[Epoch]:140-------
+Tue, 30 May 2023 07:04:20 INFO [Train] Loss:0.001253 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:22 INFO -------[Epoch]:141-------
+Tue, 30 May 2023 07:04:22 INFO [Train] Loss:0.000813 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:23 INFO -------[Epoch]:142-------
+Tue, 30 May 2023 07:04:23 INFO [Train] Loss:0.000745 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:24 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:24 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:25 INFO -------[Epoch]:143-------
+Tue, 30 May 2023 07:04:25 INFO [Train] Loss:0.001148 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:26 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:26 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:27 INFO -------[Epoch]:144-------
+Tue, 30 May 2023 07:04:27 INFO [Train] Loss:0.001381 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:27 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:27 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:29 INFO -------[Epoch]:145-------
+Tue, 30 May 2023 07:04:29 INFO [Train] Loss:0.001029 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:29 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:29 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:31 INFO -------[Epoch]:146-------
+Tue, 30 May 2023 07:04:31 INFO [Train] Loss:0.001833 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:31 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:32 INFO -------[Epoch]:147-------
+Tue, 30 May 2023 07:04:32 INFO [Train] Loss:0.001679 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:33 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:33 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:34 INFO -------[Epoch]:148-------
+Tue, 30 May 2023 07:04:34 INFO [Train] Loss:0.001245 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:35 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:35 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:36 INFO -------[Epoch]:149-------
+Tue, 30 May 2023 07:04:36 INFO [Train] Loss:0.001257 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:36 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:36 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:38 INFO -------[Epoch]:150-------
+Tue, 30 May 2023 07:04:38 INFO [Train] Loss:0.001401 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:38 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:38 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:40 INFO -------[Epoch]:151-------
+Tue, 30 May 2023 07:04:40 INFO [Train] Loss:0.001210 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:41 INFO -------[Epoch]:152-------
+Tue, 30 May 2023 07:04:41 INFO [Train] Loss:0.001036 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:42 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:42 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:43 INFO -------[Epoch]:153-------
+Tue, 30 May 2023 07:04:43 INFO [Train] Loss:0.001588 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:44 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:44 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:45 INFO -------[Epoch]:154-------
+Tue, 30 May 2023 07:04:45 INFO [Train] Loss:0.001667 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:45 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:45 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:47 INFO -------[Epoch]:155-------
+Tue, 30 May 2023 07:04:47 INFO [Train] Loss:0.001274 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:47 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:47 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:49 INFO -------[Epoch]:156-------
+Tue, 30 May 2023 07:04:49 INFO [Train] Loss:0.001430 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:50 INFO -------[Epoch]:157-------
+Tue, 30 May 2023 07:04:50 INFO [Train] Loss:0.001364 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:52 INFO -------[Epoch]:158-------
+Tue, 30 May 2023 07:04:52 INFO [Train] Loss:0.001051 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:53 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:53 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:54 INFO -------[Epoch]:159-------
+Tue, 30 May 2023 07:04:54 INFO [Train] Loss:0.001022 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:54 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:54 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:56 INFO -------[Epoch]:160-------
+Tue, 30 May 2023 07:04:56 INFO [Train] Loss:0.001647 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:56 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:56 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:58 INFO -------[Epoch]:161-------
+Tue, 30 May 2023 07:04:58 INFO [Train] Loss:0.001548 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:04:58 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:04:58 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:04:59 INFO -------[Epoch]:162-------
+Tue, 30 May 2023 07:04:59 INFO [Train] Loss:0.001385 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:01 INFO -------[Epoch]:163-------
+Tue, 30 May 2023 07:05:01 INFO [Train] Loss:0.001391 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:02 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:03 INFO -------[Epoch]:164-------
+Tue, 30 May 2023 07:05:03 INFO [Train] Loss:0.001286 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:03 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:03 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:05 INFO -------[Epoch]:165-------
+Tue, 30 May 2023 07:05:05 INFO [Train] Loss:0.001140 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:05 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:05 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:07 INFO -------[Epoch]:166-------
+Tue, 30 May 2023 07:05:07 INFO [Train] Loss:0.001363 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:07 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:07 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:08 INFO -------[Epoch]:167-------
+Tue, 30 May 2023 07:05:08 INFO [Train] Loss:0.001577 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:09 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:09 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:10 INFO -------[Epoch]:168-------
+Tue, 30 May 2023 07:05:10 INFO [Train] Loss:0.001335 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:11 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:11 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:12 INFO -------[Epoch]:169-------
+Tue, 30 May 2023 07:05:12 INFO [Train] Loss:0.001128 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:12 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:12 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:14 INFO -------[Epoch]:170-------
+Tue, 30 May 2023 07:05:14 INFO [Train] Loss:0.001131 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:14 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:14 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:16 INFO -------[Epoch]:171-------
+Tue, 30 May 2023 07:05:16 INFO [Train] Loss:0.001857 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:16 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:16 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:18 INFO -------[Epoch]:172-------
+Tue, 30 May 2023 07:05:18 INFO [Train] Loss:0.001388 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:18 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:18 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:19 INFO -------[Epoch]:173-------
+Tue, 30 May 2023 07:05:19 INFO [Train] Loss:0.001363 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:20 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:20 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:21 INFO -------[Epoch]:174-------
+Tue, 30 May 2023 07:05:21 INFO [Train] Loss:0.001528 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:22 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:22 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:23 INFO -------[Epoch]:175-------
+Tue, 30 May 2023 07:05:23 INFO [Train] Loss:0.001390 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:23 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:23 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:25 INFO -------[Epoch]:176-------
+Tue, 30 May 2023 07:05:25 INFO [Train] Loss:0.001830 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:25 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:25 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:27 INFO -------[Epoch]:177-------
+Tue, 30 May 2023 07:05:27 INFO [Train] Loss:0.001271 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:27 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:27 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:28 INFO -------[Epoch]:178-------
+Tue, 30 May 2023 07:05:28 INFO [Train] Loss:0.001067 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:29 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:29 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:30 INFO -------[Epoch]:179-------
+Tue, 30 May 2023 07:05:30 INFO [Train] Loss:0.000884 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:31 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:31 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:32 INFO -------[Epoch]:180-------
+Tue, 30 May 2023 07:05:32 INFO [Train] Loss:0.001365 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:32 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:32 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:34 INFO -------[Epoch]:181-------
+Tue, 30 May 2023 07:05:34 INFO [Train] Loss:0.001604 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:34 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:34 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:36 INFO -------[Epoch]:182-------
+Tue, 30 May 2023 07:05:36 INFO [Train] Loss:0.001667 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:36 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:36 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:37 INFO -------[Epoch]:183-------
+Tue, 30 May 2023 07:05:37 INFO [Train] Loss:0.001444 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:38 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:38 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:39 INFO -------[Epoch]:184-------
+Tue, 30 May 2023 07:05:39 INFO [Train] Loss:0.000853 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:40 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:40 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:41 INFO -------[Epoch]:185-------
+Tue, 30 May 2023 07:05:41 INFO [Train] Loss:0.009111 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:41 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:41 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:43 INFO -------[Epoch]:186-------
+Tue, 30 May 2023 07:05:43 INFO [Train] Loss:0.001858 , Train_Acc:99.966510%
+Tue, 30 May 2023 07:05:43 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:43 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:45 INFO -------[Epoch]:187-------
+Tue, 30 May 2023 07:05:45 INFO [Train] Loss:0.002196 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:45 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:45 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:47 INFO -------[Epoch]:188-------
+Tue, 30 May 2023 07:05:47 INFO [Train] Loss:0.002046 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:47 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:47 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:48 INFO -------[Epoch]:189-------
+Tue, 30 May 2023 07:05:48 INFO [Train] Loss:0.001160 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:49 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:49 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:50 INFO -------[Epoch]:190-------
+Tue, 30 May 2023 07:05:50 INFO [Train] Loss:0.000993 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:51 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:51 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:52 INFO -------[Epoch]:191-------
+Tue, 30 May 2023 07:05:52 INFO [Train] Loss:0.001252 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:52 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:52 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:54 INFO -------[Epoch]:192-------
+Tue, 30 May 2023 07:05:54 INFO [Train] Loss:0.001391 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:54 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:54 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:56 INFO -------[Epoch]:193-------
+Tue, 30 May 2023 07:05:56 INFO [Train] Loss:0.001370 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:56 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:56 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:58 INFO -------[Epoch]:194-------
+Tue, 30 May 2023 07:05:58 INFO [Train] Loss:0.001265 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:05:58 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:05:58 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:05:59 INFO -------[Epoch]:195-------
+Tue, 30 May 2023 07:05:59 INFO [Train] Loss:0.001830 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:06:00 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:06:00 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:06:01 INFO -------[Epoch]:196-------
+Tue, 30 May 2023 07:06:01 INFO [Train] Loss:0.001229 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:06:02 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:06:02 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:06:03 INFO -------[Epoch]:197-------
+Tue, 30 May 2023 07:06:03 INFO [Train] Loss:0.001529 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:06:03 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:06:03 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:06:05 INFO -------[Epoch]:198-------
+Tue, 30 May 2023 07:06:05 INFO [Train] Loss:0.001565 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:06:05 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:06:05 INFO [Result] The best acc is 100.000000% at epoch 1
+Tue, 30 May 2023 07:06:07 INFO -------[Epoch]:199-------
+Tue, 30 May 2023 07:06:07 INFO [Train] Loss:0.001756 , Train_Acc:99.983255%
+Tue, 30 May 2023 07:06:07 INFO [Validate] Val_Acc:100.000000%
+Tue, 30 May 2023 07:06:07 INFO [Result] The best acc is 100.000000% at epoch 1
